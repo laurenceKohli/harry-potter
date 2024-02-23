@@ -22,3 +22,8 @@ qu'est-ce que vous voulez découvrir ? Des tendances ? Vous voulez explorer ou e
 
 ## Références
 Qui d'autre dans le web ou dans la recherche a utilisé ces données ? Dans quel but ?
+
+## Sources DB
+- https://data.world/priyankad0993/harry-potter-screen-time/workspace/file?filename=Harry+Potter+Movie+IMDB.csv
+- https://data.world/harishkgarg/harry-potter-universe
+- https://www.kaggle.com/datasets/zez000/characters-in-harry-potter-books/data
