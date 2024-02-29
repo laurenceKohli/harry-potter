@@ -85,7 +85,7 @@ La base de données sur les temps de screen de chaque personnage a été utilis�
 
 Nous n'avons pas trouvé d'utilisation concrète et explicite de la base de données des descriptifs des personnages. Des données similaires ont été trouvées dans plusieurs projets notamment celui de https://rpubs.com/MinnieBell/728320.
 
-La base de données sur les caractères dans les livres a permis à son créateur de faire des graphiques montant la représentation des genres, des races et des maisons dans les livres d'Harry Potter.
+La base de données sur les caractères dans les livres a permis à son créateur de faire des graphiques montrant la représentation des genres, des races et des maisons dans les livres d'Harry Potter.
 
 D'autres projets de visualisation de données sur Harry Potter existent sur le web tel que sur des forums de fans, des sites Web dédiés à Harry Potter ou autre.
 
