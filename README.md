@@ -2,7 +2,7 @@
 ## Contexte
 *d'où viennent les données, qui les a créées et dans quel contexte*
 
-La base de données sur les temps de screen de chaque personnage a été créée par Priyanka Dobhal en 2021. Les données proviennent initialement de IMDb.C'est un fan qui a fait la base de donnée afin de visualiser les temps d'écran de chaque personnage.
+La base de données sur les temps de screen de chaque personnage a été créée par Priyanka Dobhal en 2021. Les données proviennent initialement de IMDb. C'est un fan qui a fait la base de donnée afin de visualiser les temps d'écran de chaque personnage.
 
 La base de données des descriptifs des personnages a été créée par des fans d'Harry Potter (Harish Kumar Garg et Jack Vishneski) afin de regrouper les biographies et les relations entre les personnages en un seul lieu. Elle a été créer entre 2017 et 2018.
 
@@ -84,3 +84,7 @@ D'autres projets de visualisation de données sur Harry Potter existent sur le w
 - https://data.world/priyankad0993/harry-potter-screen-time
 - https://data.world/harishkgarg/harry-potter-universe
 - https://www.kaggle.com/datasets/zez000/characters-in-harry-potter-books/data
+
+## Bibliographie
+- https://harrypotter.fandom.com/wiki/Gryffindor
+- https://www.imdb.com/title/tt0295297/?ref_=tt_sims_tt_i_1
