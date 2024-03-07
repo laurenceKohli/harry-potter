@@ -15,52 +15,52 @@ Son objectif était de regrouper tous les personnages des Harry Potter en une ba
 Les données sont en format CSV et en XLSX. Elles sont réparties en deux classeurs distincts.
 
 Le premier classeur (Harry Potter Movie IMDB.csv) se compose de 15 colonnes :
-- position : numéro du film dans la saga
-- const : identifiant du film sur IMBb
-- created : date de création de la ligne
-- modified : dernière modification de la ligne
-- description : liste des personnages présents et leurs temps d'écran respectifs
-- title : titre du film
-- url : lien vers la page IMBd du film
-- title_type : sorte de ressource (film)
-- imdb_rating : score du film sur IMBd
-- runtime_mins : nombre de minutes dans le film
-- year : année de sortie du film
-- genre : liste des genres du film selon IMBd
-- num_votes : nombre de personnayant voté sur IMBd
-- release_date : date de sortie du film
-- directors : réalisateur du film
+- position (integer): numéro du film dans la saga
+- const (string): identifiant du film sur IMBb
+- created (date): date de création de la ligne
+- modified (date): dernière modification de la ligne
+- description (string): liste des personnages présents et leurs temps d'écran respectifs
+- title (string): titre du film
+- url (url): lien vers la page IMBd du film
+- title_type (string): sorte de ressource (film)
+- imdb_rating (decimal): score du film sur IMBd
+- runtime_mins (integer): nombre de minutes dans le film
+- year (year): année de sortie du film
+- genre (string): liste des genres du film selon IMBd
+- num_votes (integer): nombre de personnayant voté sur IMBd
+- release_date (date): date de sortie du film
+- directors (string): réalisateur du film
 
 Le deuxième classeur (Screen Time.xlsx) se compose de 8 feuilles ayant chacune les 3 mêmes colonnes :
-- movie : nom du film
-- character : nom complet du personnage
-- screen_time : temps d'écran dans le film en question
+- movie (string): nom du film
+- character (string): nom complet du personnage
+- screen_time (string): temps d'écran dans le film en question
 
 ### Descriptifs des personnages
 Les données sont en format CSV ou JSON. Elles sont réparties en trois classeurs distincts.
 
 Le premier classeur (characters.csv) se compose de 3 colonnes :
-- id : identifiant du personnage
-- name : nom complet du personnage
-- bio : petite description de qui est le personnage
+- id (integer): identifiant du personnage
+- name (string): nom complet du personnage
+- bio (string): petite description de qui est le personnage
 
 Le deuxième classeur (graph.json) est une autre version du premier classeur mais en format JSON.
 
 Le dernier classeur (relations.csv) se compose de 3 colonnes également :
-- source : id du premier personnage
-- target : id du deuxième personnage
-- type (+ ou - ) : définit si la relation est positive ou négative
+- source (integer): id du premier personnage
+- target (integer): id du deuxième personnage
+- type (string : + ou - ) : définit si la relation est positive ou négative
 
 ### Les différents caractères dans les livres
 Les données sont en format CSV ou JSON. Nous retrouvons les mêmes données dans les deux formats. Chaque jeu de données est composé de 8 entrées :
-- name : nom complet du personnage
-- link : lien vers la page hp-lexicon.org du personnage
-- descr : petite description de qui est le personnage
-- gender : genre du personnage (homme, femme ou NaN)
-- species/race : races ou espèces (sorcière, nain, ...)
-- blood : pureté du sang du personnage
-- school : maison où le personnage est allé
-- profession : métier du personnage (si exercé)
+- name (string): nom complet du personnage
+- link (url): lien vers la page hp-lexicon.org du personnage
+- descr (string): petite description de qui est le personnage
+- gender (string : homme, femme ou NaN): genre du personnage
+- species/race (string): races ou espèces (sorcière, nain, ...)
+- blood (string): pureté du sang du personnage
+- school (string): maison où le personnage est allé
+- profession (string): métier du personnage (si exercé)
 
 
 ## But
