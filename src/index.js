@@ -3,3 +3,6 @@
 // @rollup/plugin-dsv
 // import populationData from "../data/population_total.csv";
 
+import { houseBasics } from "./js/house";
+
+houseBasics("gryffindor");
