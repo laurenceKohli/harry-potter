@@ -4,7 +4,7 @@
 
 La base de données sur les temps de screen de chaque personnage a été créée par Priyanka Dobhal en 2021. Les données proviennent initialement de IMDb. C'est un fan qui a fait la base de donnée afin de visualiser les temps d'écran de chaque personnage.
 
-La base de données des descriptifs des personnages a été créée par des fans d'Harry Potter (Harish Kumar Garg et Jack Vishneski) afin de regrouper les biographies et les relations entre les personnages en un seul lieu. Elle a été créer entre 2017 et 2018.
+La base de données des descriptifs des personnages a été créée par des fans d'Harry Potter (Harish Kumar Garg et Jack Vishneski) afin de regrouper les biographies et les relations entre les personnages en un seul lieu. Elle a été créée entre 2017 et 2018.
 
 La base de données sur les caractères dans les livres a été créée par Josè Roberto Canuto en 2021. Il s'est inspiré des informations trouvées sur le site https://www.hp-lexicon.org/characters/#index_of_characters.
 Son objectif était de regrouper tous les personnages des Harry Potter en une base de données avec pour chacun sa maison, sa race, son genre et sa profession.
@@ -67,7 +67,7 @@ Les données sont en format CSV ou JSON. Nous retrouvons les mêmes données dan
 *qu'est-ce que vous voulez découvrir ? Des tendances ? Vous voulez explorer ou expliquer?*
 
 Le but de ces données est de répartir les participants dans les différentes maisons de Poudlard en fonction de leurs réponses au questionnaire. 
-Le projet cherche à expliquer pourquoi certaines personnes sont attribuées à une maison particulière en analysant les statistiques et en leur fournissant des explications détaillées de leur maison tel que quels sont les personnages avec le plus de screentime, les personnages les plus connus ou d'autres informations qui pourraient intéresser les utilisateurs.
+Le projet leur fournit ensuite des explications détaillées sure leur maison tel que quels sont les personnages avec le plus de screentime, les personnages les plus connus et des informations sur comment la maison a été choisie.
 
 ## Références
 *Qui d'autre dans le web ou dans la recherche a utilisé ces données ? Dans quel but ?*
