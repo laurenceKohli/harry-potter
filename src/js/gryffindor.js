@@ -18,6 +18,16 @@ export const gryffindor = {
     "main1" : {
         "name" : "Harry Potter",
         "descr" : description1,
-        "img" : "../../assets/img/harry-potter.png",
-    }
+        "img" : "../../assets/img/characters/harry-potter.png",
+    },
+    "main2" : {
+        "name" : "Hermione Granger",
+        "descr" : description2,
+        "img" : "../../assets/img/characters/hermione-granger.png",
+    },
+    "main3" : {
+        "name" : "Ron Weasley",
+        "descr" : description3,
+        "img" : "../../assets/img/characters/ron-weasley.png",
+    },
 }
