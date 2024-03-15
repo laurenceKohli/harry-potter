@@ -31,3 +31,5 @@ export const gryffindor = {
         "img" : "../../assets/img/characters/ron-weasley.png",
     },
 }
+
+export const personnesGryffondor = characters.filter((e) => e.School.match("Gryffindor"));

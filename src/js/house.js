@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const section = document.querySelector("#house");
 import { gryffindor } from "./gryffindor";
 
 export function houseBasics(houseName){
@@ -83,6 +83,5 @@ export function houseBasics(houseName){
 
     //ajouter au dom
     div.append(title, basic, char);
-    body.append(div);
-
+    section.append(div);
 }

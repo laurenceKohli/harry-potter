@@ -1,4 +1,4 @@
-ï»¿Movie,Character,Screen Time
+Movie,Character,ScreenTime
 Harry Potter and the Sorcerer's Stone,Harry Potter,72:45:00
 Harry Potter and the Sorcerer's Stone,Ron Weasley,28:15:00
 Harry Potter and the Sorcerer's Stone,Hermione Granger,23:15
@@ -29,7 +29,7 @@ Harry Potter and the Sorcerer's Stone,Lily Potter,01:15
 Harry Potter and the Sorcerer's Stone,James Potter,1
 Harry Potter and the Sorcerer's Stone,Professor Filius Flitwick,1
 Harry Potter and the Sorcerer's Stone,Fang,1
-Harry Potter and the Sorcerer's Stone,"Sir Nicholas ""Nearly-Headless Nick"" ",:45
+"Harry Potter and the Sorcerer's Stone,""Sir Nicholas """"Nearly-Headless Nick"""" "",:45"
 Harry Potter and the Sorcerer's Stone,Griphook,:45
 Harry Potter and the Sorcerer's Stone,Lee Jordan,:45
 Harry Potter and the Sorcerer's Stone,Marcus Flint,:45
@@ -82,55 +82,55 @@ Harry Potter and the Chamber of Secrets,Aragog,1
 Harry Potter and the Chamber of Secrets,Marcus Flint,1
 Harry Potter and the Chamber of Secrets,The Sorting Hat,00:45
 Harry Potter and the Chamber of Secrets,Justin Finch-Fletchley,00:45
-Harry Potter and the Chamber of Secrets,"Sir Nicholas ""Nearly-Headless Nick"" ",00:45
+"Harry Potter and the Chamber of Secrets,""Sir Nicholas """"Nearly-Headless Nick"""" "",00:45"
 Harry Potter and the Chamber of Secrets,Angelina Johnson,00:30
 Harry Potter and the Chamber of Secrets,Alicia Spinnet,00:30
 Harry Potter and the Chamber of Secrets,Katie Bell,00:30
 Harry Potter and the Chamber of Secrets,Scabbers / Peter Pettigrew,00:30
 Harry Potter and the Chamber of Secrets,Professor Filius Flitwick,00:15
 Harry Potter and the Chamber of Secrets,Lee Jordan,00:15
-Harry Potter and the Prisoner of AzkabanÂ ,Harry Potter,74:30:00
-Harry Potter and the Prisoner of AzkabanÂ ,Hermione Granger,34:45:00
-Harry Potter and the Prisoner of AzkabanÂ ,Ron Weasley,21:15
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Remus Lupin,19:15
-Harry Potter and the Prisoner of AzkabanÂ ,Sirius Black,11:30
-Harry Potter and the Prisoner of AzkabanÂ ,Buckbeak,07:45
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Albus Dumbledore,06:15
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Severus Snape,05:45
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Rubeus Hagrid,05:15
-Harry Potter and the Prisoner of AzkabanÂ ,Draco Malfoy,4
-Harry Potter and the Prisoner of AzkabanÂ ,Cornelius Fudge,3
-Harry Potter and the Prisoner of AzkabanÂ ,Neville Longbottom,3
-Harry Potter and the Prisoner of AzkabanÂ ,Vernon Dursley,3
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Sybil Trelawney,02:45
-Harry Potter and the Prisoner of AzkabanÂ ,Marge Dursley,02:45
-Harry Potter and the Prisoner of AzkabanÂ ,Fred Weasley,02:45
-Harry Potter and the Prisoner of AzkabanÂ ,George Weasley,02:45
-Harry Potter and the Prisoner of AzkabanÂ ,Peter Pettigrew,02:30
-Harry Potter and the Prisoner of AzkabanÂ ,Petunia Dursley,02:15
-Harry Potter and the Prisoner of AzkabanÂ ,Vincent Crabbe,2
-Harry Potter and the Prisoner of AzkabanÂ ,Gregory Goyle,2
-Harry Potter and the Prisoner of AzkabanÂ ,Stan Shunpike,2
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Minerva McGonagall,01:45
-Harry Potter and the Prisoner of AzkabanÂ ,Arthur Weasley,01:45
-Harry Potter and the Prisoner of AzkabanÂ ,Dudley Dursley,01:45
-Harry Potter and the Prisoner of AzkabanÂ ,Seamus Finnigan,01:45
-Harry Potter and the Prisoner of AzkabanÂ ,Parvati Patil,01:15
-Harry Potter and the Prisoner of AzkabanÂ ,Argus Filch,01:15
-Harry Potter and the Prisoner of AzkabanÂ ,Hedwig,1
-Harry Potter and the Prisoner of AzkabanÂ ,Madame Rosmerta,1
-Harry Potter and the Prisoner of AzkabanÂ ,Lavender Brown,1
-Harry Potter and the Prisoner of AzkabanÂ ,Tom,1
-Harry Potter and the Prisoner of AzkabanÂ ,Ernie Prang,1
-Harry Potter and the Prisoner of AzkabanÂ ,Dean Thomas,:45
-Harry Potter and the Prisoner of AzkabanÂ ,Molly Weasley,:45
-Harry Potter and the Prisoner of AzkabanÂ ,Percy Weasley,:45
-Harry Potter and the Prisoner of AzkabanÂ ,The Fat Lady,:45
-Harry Potter and the Prisoner of AzkabanÂ ,Professor Filius Flitwick,:45
-Harry Potter and the Prisoner of AzkabanÂ ,Crookshanks,:45
-Harry Potter and the Prisoner of AzkabanÂ ,Ginny Weasley,:30
-Harry Potter and the Prisoner of AzkabanÂ ,Angelina Johnson,:30
-Harry Potter and the Prisoner of AzkabanÂ ,Pansy Parkinson,:30
+Harry Potter and the Prisoner of Azkabanÿ,Harry Potter,74:30:00
+Harry Potter and the Prisoner of Azkabanÿ,Hermione Granger,34:45:00
+Harry Potter and the Prisoner of Azkabanÿ,Ron Weasley,21:15
+Harry Potter and the Prisoner of Azkabanÿ,Professor Remus Lupin,19:15
+Harry Potter and the Prisoner of Azkabanÿ,Sirius Black,11:30
+Harry Potter and the Prisoner of Azkabanÿ,Buckbeak,07:45
+Harry Potter and the Prisoner of Azkabanÿ,Professor Albus Dumbledore,06:15
+Harry Potter and the Prisoner of Azkabanÿ,Professor Severus Snape,05:45
+Harry Potter and the Prisoner of Azkabanÿ,Professor Rubeus Hagrid,05:15
+Harry Potter and the Prisoner of Azkabanÿ,Draco Malfoy,4
+Harry Potter and the Prisoner of Azkabanÿ,Cornelius Fudge,3
+Harry Potter and the Prisoner of Azkabanÿ,Neville Longbottom,3
+Harry Potter and the Prisoner of Azkabanÿ,Vernon Dursley,3
+Harry Potter and the Prisoner of Azkabanÿ,Professor Sybil Trelawney,02:45
+Harry Potter and the Prisoner of Azkabanÿ,Marge Dursley,02:45
+Harry Potter and the Prisoner of Azkabanÿ,Fred Weasley,02:45
+Harry Potter and the Prisoner of Azkabanÿ,George Weasley,02:45
+Harry Potter and the Prisoner of Azkabanÿ,Peter Pettigrew,02:30
+Harry Potter and the Prisoner of Azkabanÿ,Petunia Dursley,02:15
+Harry Potter and the Prisoner of Azkabanÿ,Vincent Crabbe,2
+Harry Potter and the Prisoner of Azkabanÿ,Gregory Goyle,2
+Harry Potter and the Prisoner of Azkabanÿ,Stan Shunpike,2
+Harry Potter and the Prisoner of Azkabanÿ,Professor Minerva McGonagall,01:45
+Harry Potter and the Prisoner of Azkabanÿ,Arthur Weasley,01:45
+Harry Potter and the Prisoner of Azkabanÿ,Dudley Dursley,01:45
+Harry Potter and the Prisoner of Azkabanÿ,Seamus Finnigan,01:45
+Harry Potter and the Prisoner of Azkabanÿ,Parvati Patil,01:15
+Harry Potter and the Prisoner of Azkabanÿ,Argus Filch,01:15
+Harry Potter and the Prisoner of Azkabanÿ,Hedwig,1
+Harry Potter and the Prisoner of Azkabanÿ,Madame Rosmerta,1
+Harry Potter and the Prisoner of Azkabanÿ,Lavender Brown,1
+Harry Potter and the Prisoner of Azkabanÿ,Tom,1
+Harry Potter and the Prisoner of Azkabanÿ,Ernie Prang,1
+Harry Potter and the Prisoner of Azkabanÿ,Dean Thomas,:45
+Harry Potter and the Prisoner of Azkabanÿ,Molly Weasley,:45
+Harry Potter and the Prisoner of Azkabanÿ,Percy Weasley,:45
+Harry Potter and the Prisoner of Azkabanÿ,The Fat Lady,:45
+Harry Potter and the Prisoner of Azkabanÿ,Professor Filius Flitwick,:45
+Harry Potter and the Prisoner of Azkabanÿ,Crookshanks,:45
+Harry Potter and the Prisoner of Azkabanÿ,Ginny Weasley,:30
+Harry Potter and the Prisoner of Azkabanÿ,Angelina Johnson,:30
+Harry Potter and the Prisoner of Azkabanÿ,Pansy Parkinson,:30
 Harry Potter and the Goblet of Fire,Harry Potter,63:15:00
 Harry Potter and the Goblet of Fire,Ron Weasley,20:30
 Harry Potter and the Goblet of Fire,Hermione Granger,16:30
@@ -170,7 +170,7 @@ Harry Potter and the Goblet of Fire,Argus Filch,:45
 Harry Potter and the Goblet of Fire,Professor Filius Flitwick,:45
 Harry Potter and the Goblet of Fire,Vincent Crabbe,:45
 Harry Potter and the Goblet of Fire,Gregory Goyle,:45
-Harry Potter and the Goblet of Fire,"Alastor ""Mad-Eye"" Moody ",:30
+"Harry Potter and the Goblet of Fire,""Alastor """"Mad-Eye"""" Moody "",:30"
 Harry Potter and the Goblet of Fire,Nigel,:30
 Harry Potter and the Goblet of Fire,Nagini,:30
 Harry Potter and the Goblet of Fire,Lily Potter,:15
@@ -206,7 +206,7 @@ Harry Potter and the Order of the Phoenix,Molly Weasley,01:45
 Harry Potter and the Order of the Phoenix,Nymphadora Tonks,01:45
 Harry Potter and the Order of the Phoenix,Seamus Finnigan,01:45
 Harry Potter and the Order of the Phoenix,Grawp,01:45
-Harry Potter and the Order of the Phoenix,"Alastor ""Mad-Eye"" Moody ",01:30
+"Harry Potter and the Order of the Phoenix,""Alastor """"Mad-Eye"""" Moody "",01:30"
 Harry Potter and the Order of the Phoenix,Parvati Patil,01:30
 Harry Potter and the Order of the Phoenix,Padma Patil,01:30
 Harry Potter and the Order of the Phoenix,Arabella Figg,01:30
@@ -302,7 +302,7 @@ Harry Potter and the Deathly Hallows: Part 1,Dolores Umbridge,01:45
 Harry Potter and the Deathly Hallows: Part 1,Arthur Weasley,01:45
 Harry Potter and the Deathly Hallows: Part 1,Mary Cattermole,01:45
 Harry Potter and the Deathly Hallows: Part 1,Bathilda Bagshot,01:30
-Harry Potter and the Deathly Hallows: Part 1,"Alastor ""Mad-Eye"" Moody ",01:30
+"Harry Potter and the Deathly Hallows: Part 1,""Alastor """"Mad-Eye"""" Moody "",01:30"
 Harry Potter and the Deathly Hallows: Part 1,Fleur Delacour,01:30
 Harry Potter and the Deathly Hallows: Part 1,Bill Weasley,01:15
 Harry Potter and the Deathly Hallows: Part 1,Professor Severus Snape,01:15
@@ -400,4 +400,3 @@ Harry Potter and the Deathly Hallows: Part 2,Professor Sybil Trelawney,:15
 Harry Potter and the Deathly Hallows: Part 2,Madame Poppy Pomfrey,:15
 Harry Potter and the Deathly Hallows: Part 2,Peter Pettigrew,:15
 Harry Potter and the Deathly Hallows: Part 2,The Sorting Hat,:15
-
