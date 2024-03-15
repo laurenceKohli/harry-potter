@@ -80,6 +80,12 @@ La base de données sur les caractères dans les livres a permis à son créateu
 
 D'autres projets de visualisation de données sur Harry Potter existent sur le web tel que sur des forums de fans, des sites Web dédiés à Harry Potter ou autre.
 
+## Wifreframe
+
+Voici le lien du wireframe Figma: https://www.figma.com/file/2vLddkmqlGXqozgHm8DVoA/VisualDon-Lab-Harry-Potter?type=design&node-id=0-1&mode=design&t=eJMQGXfqPqGLGUVU-0
+
+Voici le lien de la présentation visuelle de Figma: https://www.figma.com/proto/2vLddkmqlGXqozgHm8DVoA/VisualDon-Lab-Harry-Potter?type=design&node-id=289-1677&t=eJMQGXfqPqGLGUVU-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=289%3A1677
+
 ## Sources DB
 - https://data.world/priyankad0993/harry-potter-screen-time
 - https://data.world/harishkgarg/harry-potter-universe
