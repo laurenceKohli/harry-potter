@@ -2,6 +2,7 @@ import filmTime from "../../data/Screen_Time_dos.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { personnesGryffondor } from "./gryffindor";
+import { axisRight } from "d3-axis";
 
 let houseNow = "";
 
@@ -35,17 +36,20 @@ export function displayFilm(num, house = "gryffindor") {
     const screenTime = document.createElement("div");
     screenTime.classList.add("graphique");
 
-
-    console.log(houseNow);
+    
+    const totalScreen = document.createElement("div");
+    totalScreen.classList.add("totalScreen");
 
     const times = timesOfFilm(film[0]);
     const times3prems = times.slice(0, 3);
     console.log(times3prems);
 
     div.append(title, filmTitle, descr, screenTime);
-    section.append(div);
+    section.append(div, totalScreen);
 
     creeBarCharHor(times3prems);
+
+    creeBarCharVer(times)
     
     
 }
@@ -133,4 +137,52 @@ function creeBarCharHor(donnees){
           .attr("y", (d, i) => i * 40 + 10)
           .text(d => d.ScreenTime)
           .attr("text-anchor", "middle")) 
+}
+
+function creeBarCharVer(donnees){
+    //svg
+    const height = 600;
+
+    const monSvg = select(".totalScreen")
+        .append('svg')
+        .attr("width", "90%")
+        .attr("height", height);
+
+    const yScale = scaleLinear()
+        .domain([0, tempsEnMilliseconds(donnees[0].ScreenTime)])
+        .range([10, height]); 
+
+    const barChart = monSvg
+        .selectAll("rect")
+        .data(donnees)
+        .join(enter => enter
+            .append("rect")
+            .attr("x", (d, i) => i * 30)
+            .attr("y", d => height - yScale(tempsEnMilliseconds(d.ScreenTime)))
+            .attr("width", 30)
+            .attr("height", (d, i) => yScale(tempsEnMilliseconds(d.ScreenTime))))
+            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue");
+
+    // const axisRight = axisRight(yScale);
+    // barChart.append('g')
+    //     .call(axisRight)
+
+    // Crée des étiquettes de texte pour les noms des villes
+    monSvg.selectAll("text")
+        .data(donnees)
+        .enter().append("text")
+        .attr("x",(d,i) => i*30 + 5) 
+        .attr("y", 20)
+        .text(d => d.Character)
+        .attr("transform", (d,i) => `translate(0,600) rotate(-90, ${i*30}, 0)`)
+       
+
+    // const labelsCount = monSvg.selectAll(".count")
+    //     .data(donnees)
+    //     .join(enter => enter.append("text")
+    //       .attr("class", "count")
+    //       .attr("x", (d, i) => 200 + xScale(tempsEnMilliseconds(d.ScreenTime))) 
+    //       .attr("y", (d, i) => i * 40 + 10)
+    //       .text(d => d.ScreenTime)
+    //       .attr("text-anchor", "middle")) 
 }
