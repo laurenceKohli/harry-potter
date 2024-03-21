@@ -8,7 +8,7 @@ let description2 = HPDataRow2.Descr;
 let HPDataRow3 = characters.find((e) => e.Name === "Ron Weasley");
 let description3 = HPDataRow3.Descr;
 
-export const gryffindor = {
+const gryffindor = {
     "quote" : "Gryffindor, where dwell the brave at heart!",
     "animal" : "Lion",
     "element" : "Fire",
@@ -32,4 +32,6 @@ export const gryffindor = {
     },
 }
 
-export const personnesGryffondor = characters.filter((e) => e.School.match("Gryffindor"));
+const personnesGryffondor = characters.filter((e) => e.School.match("Gryffindor"));
+
+export {gryffindor, personnesGryffondor}
