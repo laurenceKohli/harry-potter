@@ -1,6 +1,7 @@
 /* Packages */
-@import 'npm:normalize.css';
+@import 'normalize.css';
 
 /* Project */
 @import 'variables.css';
 @import 'typography.css';
+@import 'card.css';
