@@ -3,25 +3,45 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="/src/css/index.css" />
 	<title>Harry Potter Quiz</title>
 </head>
 <body>
-<section id="quiz">
-	<img src="assets/img/House_Banners.png" alt="House_Banners" style="height: 275px;">
-	<p>Welcome !</p>
-	<p>“Your house will be determined by the qualities you possess, not by the color of your eyes or the blood in your veins.” SORTING HAT</p>
-	<p>The test begins now !</p>
-</section>
+	<section id="quiz">
+		<img src="assets/img/House_Banners.png" alt="House_Banners" style="height: 275px;">
+		<p>Welcome !</p>
+		<p>“Your house will be determined by the qualities you possess, not by the color of your eyes or the blood in
+			your veins.” SORTING HAT</p>
+		<p>The test begins now !</p>
+	</section>
 
-<section id="questions" class="hide">
-	
-</section>
+	<section id="questions" class="hide">
 
-<section id="house">
+	</section>
 
-</section>
+	<section id="house">		
+	</section>
 
-<script type="module" src="/src/index.js"></script>
+
+	<div class="hp-quiz-card">
+		<!-- Conteneur principal de la carte avec une classe spécifique -->
+		<div class="card">
+			<!-- Conteneur principal de la carte -->
+			<div class="sidebar">
+				<a href="#" class="menu-item">HOME</a>
+				<a href="#" class="menu-item">POSTS</a>
+				<a href="#" class="menu-item active">DESCRIPTION</a>
+			</div>
+
+
+			<div class="content">
+				<h1>[Name Surname]</h1>
+				<p>[Bloodline]</p>
+				<p>[Gender]</p>
+				<p>[Description]</p>
+				<div class="gryffindor">GRYFFINDOR</div>
+			</div>
+		</div>
+		<script type="module" src="/src/index.js"></script>
 </body>
 </html>

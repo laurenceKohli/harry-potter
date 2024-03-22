@@ -1,0 +1,62 @@
+.hp-quiz-card {
+    color: white;
+    font-family: 'Caudex', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Pleine hauteur de la fenêtre */
+    margin: 0;
+    /* Supprime les marges par défaut */
+}
+
+.hp-quiz-card .card {
+    display: flex;
+    background-color: #4F3636;
+    /* Couleur de fond de la carte */
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ombre de la carte */
+    border-radius: 10px;
+    /* Bordures arrondies de la carte */
+    overflow: hidden;
+    /* Cache le contenu débordant */
+    width: 80%;
+    /* Largeur de la carte */
+    max-width: 600px;
+    /* Largeur maximale de la carte */
+}
+
+.hp-quiz-card .sidebar {
+    width: 200px;
+    height: 500px;
+    background-color: #560C0E;
+    padding: 20px;
+}
+
+.hp-quiz-card .content {
+    padding: 1px 16px;
+    flex-grow: 1;
+    /* Permet au contenu de remplir l'espace restant */
+}
+
+.hp-quiz-card .menu-item {
+    margin-bottom: 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.hp-quiz-card .menu-item.active {
+    background-color: #740001;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.hp-quiz-card .gryffindor {
+    color: #740001;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 30px;
+}
