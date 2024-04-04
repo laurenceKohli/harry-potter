@@ -1,72 +1,17 @@
 import filmTime from "../../data/Screen_Time_dos.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
-import { personnesGryffondor } from "./gryffindor";
- 
-let houseNow = "";
-let people = "";
- 
-function houseChoosen(house) {
-    switch (house) {
-        case "gryffindor":
-            houseNow = "Gryffindor";
-            people = personnesGryffondor;
-            break;
-        default:
-            break;
-    }
-}
- 
-const section = document.querySelector("#house");
- 
-export function displayFilm(num, house = "Gryffindor") {
-    houseChoosen(house);
- 
-    const div = document.createElement("div");
-    div.classList.add("film");
- 
-    const title = document.createElement("h1");
-    title.textContent = `Screentime of the 3 most characters of each film for ${houseNow}`;
- 
-    const film = titleFilm(num);
-    const filmTitle = document.createElement("h2");
-    filmTitle.textContent = `${film[0]} (${film[2]})`;
-    const descr = document.createElement("p");
-    descr.textContent = film[1];
- 
-    const screenTime = document.createElement("div");
-    screenTime.classList.add("graphique");
- 
-    div.append(title, filmTitle, descr, screenTime);
- 
-    const totalScreen = document.createElement("div");
-    const titleTotal = document.createElement("h1");
-    titleTotal.textContent = "Graph of the 20th more Screentimed characters";
-    totalScreen.classList.add("totalScreen");
- 
-    totalScreen.append(titleTotal);
- 
-    const average = document.createElement("div");
-    const averageTitle = document.createElement("h1");
-    averageTitle.textContent = "Average screentime per House";
-    averageTitle.classList.add("averageScreen");
- 
-    const averageInfo = document.createElement("p");
-    averageInfo.textContent = "Click to see the others Houses";
- 
-    average.append(averageTitle, averageInfo);
- 
-    section.append(div, totalScreen, average);
- 
-    const times = timesOfFilm(film[0]);
-    const times3prems = times.slice(0, 3);
- 
-    creeBarCharHor(times3prems);
-    creeBarCharVer(times);
-    creeBarCharAverage();
+import { axisRight } from "d3-axis";
+
+let peopleNow = "";
+
+export function graphOver(people) {
+    peopleNow = people;
+    const averageFilms = averagePerPerson();
+    creeBarCharVer(averageFilms);
  
     const CardScreen = document.querySelector(".totalScreen"); // TODO Changer l'id en focntion de l'élément
-    CardScreen.addEventListener("mouseover", showCard);
+    CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
  
     // Création de la carte à afficher au survol
@@ -95,7 +40,7 @@ function createHoverCard() {
     document.body.appendChild(card);
 }
  
-function showCard() {
+function showCard(e) {
     const card = document.querySelector(".hp-quiz-card");
     if (card) {
         card.classList.remove("hide");
@@ -104,6 +49,7 @@ function showCard() {
         card.style.top = "50%";
         card.style.transform = "translate(-50%, -50%)";
         card.style.zIndex = "1000"; // Assurez-vous que la carte est au-dessus des autres éléments
+        document.querySelector(".hp-quiz-card h1").textContent = (e.target.classList.value == "")? "NaN" : e.target.classList.value;
     }
 }
  
@@ -113,7 +59,8 @@ function hideCard() {
         card.classList.add("hide");
     }
 }
- 
+
+
 function titleFilm(num) {
     let title = "";
     let descr = "";
@@ -138,7 +85,7 @@ function titleFilm(num) {
 function timesOfFilm(filmTitle) {
     let filmRows = filmTime.filter((e) => e.Movie === filmTitle);
     let timeRows = [];
-    people.forEach(personne => {
+    peopleNow.forEach(personne => {
         const line = filmRows.filter((e) => e.Character.match(personne.Name));
         if (line.length > 0) {
             if (!isNaN(tempsEnMilliseconds(line[0].ScreenTime))) {
@@ -150,6 +97,27 @@ function timesOfFilm(filmTitle) {
  
     return timeRows.sort((a, b) => tempsEnMilliseconds(b.ScreenTime) - tempsEnMilliseconds(a.ScreenTime));
 }
+
+function averagePerPerson(){
+    let tempsTotal = [];
+    for (let index = 1; index < 3; index++) {
+        const film = titleFilm(index);
+        const times = timesOfFilm(film[0]);
+        times.forEach(personne => {
+            const alreadyIn = tempsTotal.filter((e) => e.Character.match(personne.Character))
+            if (alreadyIn.length > 0) {
+                alreadyIn[0].ScreenTime += tempsEnMilliseconds(personne.ScreenTime);
+            } else {
+                const send = {
+                    "Character": personne.Character, 
+                    "ScreenTime": tempsEnMilliseconds(personne.ScreenTime)
+                }
+                tempsTotal.push(send)
+            }
+        })
+    }
+    return tempsTotal.sort((a, b) => (b.ScreenTime) - (a.ScreenTime));
+}
  
 function tempsEnMilliseconds(temps) {
     const parties = temps.split(':');
@@ -158,123 +126,61 @@ function tempsEnMilliseconds(temps) {
     const millisecondes = parties[2] ? parseInt(parties[2], 10) : 0;
     return (minutes * 60 * 1000) + (secondes * 1000) + millisecondes;
 }
- 
-function creeBarCharHor(donnees){
-    //svg
-    const width = window.innerWidth;
- 
-    const monSvg = select(".graphique")
-        .append('svg')
-        .attr("width", width)
-        .attr("height", 100);
- 
-    const xScale = scaleLinear()
-        .domain([0, tempsEnMilliseconds(donnees[0].ScreenTime)])
-        .range([0, width-300]);
- 
-    const barChart = monSvg
-        .selectAll("rect")
-        .data(donnees)
-        .join(enter => enter
-            .append("rect")
-            .attr("x", 160)
-            .attr("y", (d, i) => i * 40)
-            .attr("width", (d, i) => xScale(tempsEnMilliseconds(d.ScreenTime)))
-            .attr("height", 10));
-    // Crée des étiquettes de texte pour les noms des villes
-    const labels = monSvg.selectAll("text")
-        .data(donnees)
-        .enter().append("text")
-        .attr("x", 5)
-        .attr("y", (d, i) => i * 40 + 10)
-        .text(d => d.Character)
- 
-    const labelsCount = monSvg.selectAll(".count")
-        .data(donnees)
-        .join(enter => enter.append("text")
-          .attr("class", "count")
-          .attr("x", (d, i) => 200 + xScale(tempsEnMilliseconds(d.ScreenTime)))
-          .attr("y", (d, i) => i * 40 + 10)
-          .text(d => d.ScreenTime)
-          .attr("text-anchor", "middle"))
+
+function tempsEnMinutes(temps){
+    // Convertir en secondes
+    let secondes = Math.floor((temps / 1000) % 60);
+    // Convertir en minutes
+    let minutes = Math.floor((temps / (1000 * 60)));
+
+    // Ajouter un zéro devant les chiffres < 10 pour formater correctement
+    if (secondes < 10) {
+        secondes = "0" + secondes;
+    }
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    // Retourner le temps formaté
+    return minutes + ":" + secondes;
 }
  
+
 function creeBarCharVer(donnees){
     //svg
     const height = 600;
  
     const monSvg = select(".totalScreen")
         .append('svg')
-        .attr("width", "90%")
-        .attr("height", height);
+        .attr("width", "100%")
+        .attr("height", 650);
  
     const yScale = scaleLinear()
-        .domain([0, tempsEnMilliseconds(donnees[0].ScreenTime)])
-        .range([20, height]);
+        .domain([0, donnees[0].ScreenTime])
+        .range([height, 0]);
  
     const barChart = monSvg
         .selectAll("rect")
         .data(donnees)
         .join(enter => enter
             .append("rect")
-            .attr("x", (d, i) => i * 30)
-            .attr("y", d => height - yScale(tempsEnMilliseconds(d.ScreenTime)))
+            .attr("x", (d, i) => i * 30 + 55)
+            .attr("y", d => yScale(d.ScreenTime))
             .attr("width", 30)
-            .attr("height", (d, i) => yScale(tempsEnMilliseconds(d.ScreenTime))))
-            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue");
+            .attr("height", (d, i) => height - yScale(d.ScreenTime))
+            .attr("class", d => d.Character)
+            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue"));
  
-    // const axisRight = axisRight(yScale);
-    // barChart.append('g')
-    //     .call(axisRight)
- 
-    // Crée des étiquettes de texte pour les noms des villes
-    monSvg.selectAll("text")
-        .data(donnees)
-        .enter().append("text")
-        .attr("x",(d,i) => i*30 + 5)
-        .attr("y", 20)
-        .text(d => d.Character)
-        .attr("transform", (d,i) => `translate(0,600) rotate(-90, ${i*30}, 0)`)
-       
- 
-    // const labelsCount = monSvg.selectAll(".count")
-    //     .data(donnees)
-    //     .join(enter => enter.append("text")
-    //       .attr("class", "count")
-    //       .attr("x", (d, i) => 200 + xScale(tempsEnMilliseconds(d.ScreenTime)))
-    //       .attr("y", (d, i) => i * 40 + 10)
-    //       .text(d => d.ScreenTime)
-    //       .attr("text-anchor", "middle"))
-}
- 
-function creeBarCharAverage(){
-    //svg
-    const donnees = [31, 29, 23, 17]
- 
-    const monSvg = select(".averageScreen")
-        .append('svg')
-        .attr("width", "90%")
-        .attr("height", 600);
- 
-    const yScale = scaleLinear()
-        .domain([0, 40])
-        .range([20, 500]);
- 
-    const barChart = monSvg
-        .selectAll("rect")
-        .data(donnees)
-        .join(enter => enter
-            .append("rect")
-            .attr("x", (d, i) => i * 200)
-            .attr("y", d => 500 - yScale(d))
-            .attr("width", 100)
-            .attr("height", (d, i) => yScale(d)))
-            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue");
-    // Crée des étiquettes de texte pour les noms des villes
-    // const labels = monSvg.selectAll("text")
-    //     .data(donnees)
-    //     .enter().append("text")
-    //     .attr("x", 5)
-    //     .attr("y", (d, i) => i * 40 + 10)
-    //     .text(d => d)
+
+            const axis = axisRight(yScale)
+            .tickFormat(x => `${tempsEnMinutes(x)}`);
+    
+        const axisGroup = monSvg.append('g')
+            .attr('transform', `translate(42, 0)`) // Décalage vers la droite
+            .call(axis);
+    
+        // Déplacer les étiquettes vers la droite
+        axisGroup.selectAll('text')
+            .attr('x', -40) // Ajuster la position horizontale
+    
 }

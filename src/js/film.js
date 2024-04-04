@@ -2,7 +2,7 @@ import filmTime from "../../data/Screen_Time_dos.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { personnesGryffondor } from "./gryffindor";
-import { axisRight } from "d3-axis";
+import { graphOver } from "./graphHover";
 
 let houseNow = "";
 let people = "";
@@ -65,8 +65,7 @@ export function displayFilm(num, house = "Gryffindor") {
 
     creeBarCharHor(times3prems);
 
-    const averageFilms = averagePerPerson();
-    creeBarCharVer(averageFilms);
+    graphOver(people);
 
     creeBarCharAverage()
     
@@ -109,51 +108,12 @@ function timesOfFilm(filmTitle) {
     return timeRows.sort((a, b) => tempsEnMilliseconds(b.ScreenTime) - tempsEnMilliseconds(a.ScreenTime));
 }
 
-function averagePerPerson(){
-    let tempsTotal = [];
-    for (let index = 1; index < 3; index++) {
-        const film = titleFilm(index);
-        const times = timesOfFilm(film[0]);
-        times.forEach(personne => {
-            const alreadyIn = tempsTotal.filter((e) => e.Character.match(personne.Character))
-            if (alreadyIn.length > 0) {
-                alreadyIn[0].ScreenTime += tempsEnMilliseconds(personne.ScreenTime);
-            } else {
-                const send = {
-                    "Character": personne.Character, 
-                    "ScreenTime": tempsEnMilliseconds(personne.ScreenTime)
-                }
-                tempsTotal.push(send)
-            }
-        })
-    }
-    return tempsTotal.sort((a, b) => (b.ScreenTime) - (a.ScreenTime));
-}
-
 function tempsEnMilliseconds(temps) {
     const parties = temps.split(':');
     const minutes = parties[0] == "" ? 0 : parseInt(parties[0], 10);
     const secondes = parties[1] == "" ? 0 : parseInt(parties[1], 10);
     const millisecondes = parties[2] ? parseInt(parties[2], 10) : 0;
     return (minutes * 60 * 1000) + (secondes * 1000) + millisecondes;
-}
-
-function tempsEnMinutes(temps){
-     // Convertir en secondes
-     let secondes = Math.floor((temps / 1000) % 60);
-     // Convertir en minutes
-     let minutes = Math.floor((temps / (1000 * 60)));
-
-     // Ajouter un zéro devant les chiffres < 10 pour formater correctement
-     if (secondes < 10) {
-         secondes = "0" + secondes;
-     }
-     if (minutes < 10) {
-         minutes = "0" + minutes;
-     }
- 
-     // Retourner le temps formaté
-     return minutes + ":" + secondes;
 }
 
 function creeBarCharHor(donnees){
@@ -194,43 +154,6 @@ function creeBarCharHor(donnees){
           .attr("y", (d, i) => i * 40 + 10)
           .text(d => d.ScreenTime)
           .attr("text-anchor", "middle")) 
-}
-
-function creeBarCharVer(donnees){
-    //svg
-    const height = 600;
-
-    const monSvg = select(".totalScreen")
-        .append('svg')
-        .attr("width", "100%")
-        .attr("height", 650);
-
-    const yScale = scaleLinear()
-        .domain([0, donnees[0].ScreenTime])
-        .range([height, 0]); 
-
-    const barChart = monSvg
-        .selectAll("rect")
-        .data(donnees)
-        .join(enter => enter
-            .append("rect")
-            .attr("x", (d, i) => i * 30 + 55)
-            .attr("y", d => yScale(d.ScreenTime))
-            .attr("width", 30)
-            .attr("height", (d, i) => height - yScale(d.ScreenTime))
-            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue"));
-
-    const axis = axisRight(yScale)
-        .tickFormat(x => `${tempsEnMinutes(x)}`);
-
-    const axisGroup = monSvg.append('g')
-        .attr('transform', `translate(42, 0)`) // Décalage vers la droite
-        .call(axis);
-
-    // Déplacer les étiquettes vers la droite
-    axisGroup.selectAll('text')
-        .attr('x', -40) // Ajuster la position horizontale
-
 }
 
 function creeBarCharAverage(){
