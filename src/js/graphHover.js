@@ -42,14 +42,17 @@ function createHoverCard() {
  
 function showCard(e) {
     const card = document.querySelector(".hp-quiz-card");
-    if (card) {
-        card.classList.remove("hide");
-        card.style.position = "fixed";
-        card.style.left = "50%";
-        card.style.top = "50%";
-        card.style.transform = "translate(-50%, -50%)";
-        card.style.zIndex = "1000"; // Assurez-vous que la carte est au-dessus des autres éléments
-        document.querySelector(".hp-quiz-card h1").textContent = (e.target.classList.value == "")? "NaN" : e.target.classList.value;
+    const hover = document.querySelector(".hp-quiz-card h1")
+    if(!(hover.textContent = (e.target.classList.value == ""))){
+        if (card) {
+            card.classList.remove("hide");
+            card.style.position = "fixed";
+            card.style.left = "50%";
+            card.style.top = "50%";
+            card.style.transform = "translate(-50%, -50%)";
+            card.style.zIndex = "1000"; // Assurez-vous que la carte est au-dessus des autres éléments
+            hover.textContent = (e.target.classList.value == "")? "NaN" : e.target.classList.value;
+        }
     }
 }
  
