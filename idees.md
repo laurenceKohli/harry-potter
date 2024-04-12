@@ -11,11 +11,11 @@
 - ? ajouter relations entre personnages
 
 # ToDo
-index.js
+## index.js
 - faire afficher uniquement le début de la page questions
 - enlever fonction dispalyQuestions
 
-film.js
+## film.js
 - ajouter films manquants (fonction titleFilm)
 - exporter fonction titleFilm
 - enlever stat final de ce document
@@ -28,16 +28,14 @@ film.js
 - affichage vif or / pas (ScreenTime per film)
 - affichage vif or (Graph 20 characters)
 
-graphHover.js
-- récupérer les données dans les cartes
+## graphHover.js
 - importer fonction titleFilm
-- éviter que le hover marche si on est pas sur un trait OU faire que ça affiche la carte de la personne qui est sur cette ligne verticale
 - CSS page
 - CSS cartes des autres maisons (si possible à travers variables globales)
 - tester graphique pour chaque maison
 - ajouter Dobby
 
-questions.js
+## questions.js
 - gestion comptage point
 - gestion clic sur réponses et enregistrement points
 - CSS question
@@ -46,16 +44,16 @@ questions.js
 - scroll vertical entre questions
 - ajouter ici fonction pour display 1 question à la fois (base depuis index.js)
 
-house.js
+## house.js
 - fonction pour expliquer pourquoi on est dans cette maison
 - CSS page
 
-stat final
+## stat final
 - fonction pour afficher average screetime per House
 - import fonction pour switch de maison
 - CSS page
 
-Autres
+## Autres
 - lier film, house, graphOver de manière adéquate (autre fichier ?) 
   -> inclure stat finale ici ??
   -> fonction pour switch de maison EXPORT

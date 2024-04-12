@@ -8,6 +8,7 @@
     /* Pleine hauteur de la fenêtre */
     margin: 0;
     /* Supprime les marges par défaut */
+    position: relative;
 }
 
 .hp-quiz-card .card {
@@ -53,10 +54,11 @@
     border-radius: 30px;
 }
 
+
 .hp-quiz-card .gryffindor {
     color: #740001;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
     font-weight: bold;
     font-size: 30px;
 }
