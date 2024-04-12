@@ -34,7 +34,7 @@ function createHoverCard() {
                 <p>[Bloodline]</p>
                 <p>[Gender]</p>
                 <p>[Description]</p>
-                <div class="gryffindor">GRYFFINDOR</div>
+                <div class="house">GRYFFINDOR</div>
             </div>
         </div>
     `;
@@ -180,7 +180,7 @@ function creeBarCharVer(donnees){
             .attr("width", 30)
             .attr("height", (d, i) => height - yScale(d.ScreenTime))
             .attr("class", d => d.Character)
-            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue"));
+            .attr("fill", (d, i) => (i%2 == 0) ? "#740001" : "#D37E01"));
  
 
             const axis = axisRight(yScale)
