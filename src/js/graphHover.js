@@ -1,4 +1,5 @@
 import filmTime from "../../data/Screen_Time_dos.csv";
+import filmCaracters from "../../data/HPCharactersData.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { axisRight } from "d3-axis";
@@ -33,17 +34,21 @@ function createHoverCard() {
                 <p>[Bloodline]</p>
                 <p>[Gender]</p>
                 <p>[Description]</p>
-                <div class="gryffindor">GRYFFINDOR</div>
+                <div class="house">GRYFFINDOR</div>
             </div>
         </div>
     `;
     document.body.appendChild(card);
 }
- 
+
 function showCard(e) {
     const card = document.querySelector(".hp-quiz-card");
-    const hover = document.querySelector(".hp-quiz-card h1")
-    if(!(hover.textContent = (e.target.classList.value == ""))){
+    const hover = document.querySelector(".hp-quiz-card h1");
+    const currentName = e.target.classList.value;
+    
+
+    if (!(hover.textContent = ((currentName) == ""))) {
+        const dataCaracter = filmCaracters.find((e) => e.Name == currentName)
         if (card) {
             card.classList.remove("hide");
             card.style.position = "fixed";
@@ -52,6 +57,9 @@ function showCard(e) {
             card.style.transform = "translate(-50%, -50%)";
             card.style.zIndex = "1000"; // Assurez-vous que la carte est au-dessus des autres éléments
             hover.textContent = (e.target.classList.value == "")? "NaN" : e.target.classList.value;
+            document.querySelector('.content p:nth-child(2)').textContent = dataCaracter.Blood;
+            document.querySelector('.content p:nth-child(3)').textContent = dataCaracter.Gender;
+            document.querySelector('.content p:nth-child(4)').textContent = dataCaracter.Descr;
         }
     }
 }
@@ -172,7 +180,7 @@ function creeBarCharVer(donnees){
             .attr("width", 30)
             .attr("height", (d, i) => height - yScale(d.ScreenTime))
             .attr("class", d => d.Character)
-            .attr("fill", (d, i) => (i%2 == 0) ? "green" : "steelblue"));
+            .attr("fill", (d, i) => (i%2 == 0) ? "#740001" : "#D37E01"));
  
 
             const axis = axisRight(yScale)
