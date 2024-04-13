@@ -1,0 +1,45 @@
+section {
+    min-height: 100vh;
+}
+
+#mainCharacters{
+    position: sticky;
+    top: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.inScroll{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.fixed {
+    position: sticky;
+    top : 41px;
+}
+
+.fixed > div.fixed {
+    top : 162px;
+}
+
+.characters {
+    display: flex;
+    position: sticky;
+    top : 132px;
+}
+
+.mainCharacter{
+    margin: 0 10px;
+    max-width: 450px;
+}
+
+#second, #third {
+    position: relative;
+    top: 100vh;
+}
+
+.characters.sticky #second{
+    top : 0;
+}
