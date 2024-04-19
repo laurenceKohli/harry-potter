@@ -7,7 +7,7 @@ import { houseBasics } from "./js/house";
 import { displayFilm } from "./js/film";
 
 houseBasics("ravenclaw");
-displayFilm(1,"ravenclaw");
+displayFilm(1,"gryffindor");
 
 
 //questions

@@ -1,8 +1,8 @@
 export const questionsUser = {
   1: {
     question:
-      "Question: What environment do you prefer for studying or working?",
-    réponse: {
+      "What environment do you prefer for studying or working?",
+    reponse: {
       "A spacious room with friends": "G",
       "A silent library": "R",
       "A cozy corner at home": "H",
@@ -12,7 +12,7 @@ export const questionsUser = {
 
   2: {
     question: "Which spell or potion intrigues you the most?",
-    réponse: {
+    reponse: {
       "Shield Charm": "H",
       "Expecto Patronum": "R",
       "Polyjuice Potion": "S",
@@ -22,7 +22,7 @@ export const questionsUser = {
 
   3: {
     question: "What quality do you admire most in a person?",
-    réponse: {
+    reponse: {
         "Ability to make tough decisions": "G",
         "Sense of initiative and leadership": "S",
         "Intellectual curiosity": "R",
@@ -32,7 +32,7 @@ export const questionsUser = {
 
   4: {
     question: "If you could talk to an animal, which one would you choose?",
-    réponse: {
+    reponse: {
         "Fox": "S",
         "Dolphin": "H",
         "Owl": "R",
@@ -42,7 +42,7 @@ export const questionsUser = {
 
   5: {
     question: "Which element of nature do you prefer?",
-    réponse: {
+    reponse: {
         "Earth": "H",
         "Water": "S",
         "Fire": "G",
@@ -51,7 +51,7 @@ export const questionsUser = {
   },
   6: {
     question: "What kind of books attract you the most?",
-    réponse: {
+    reponse: {
         "Science and knowledge books": "R",
         "Epic adventures": "G",
         "Books on mysteries": "S",
@@ -59,3 +59,21 @@ export const questionsUser = {
     },
   },
 };
+
+export function displayQuestion(id){
+  const section = document.getElementById("questions");
+   const questionElement = document.createElement("div");
+   questionElement.innerHTML = `<h3>${questionsUser[id].question}</h3>`;
+
+   console.log(questionsUser[id].reponse)
+    const answersList = document.createElement("ul");
+
+    for (const [key, value] of Object.entries(questionsUser[id].reponse)) {
+      const answerItem = document.createElement("li");
+      answerItem.textContent = key;
+      answersList.appendChild(answerItem);
+    }
+ 
+    questionElement.appendChild(answersList);
+    section.appendChild(questionElement);
+}
