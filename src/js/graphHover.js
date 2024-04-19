@@ -3,43 +3,24 @@ import filmCaracters from "../../data/HPCharactersData.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { axisRight } from "d3-axis";
+import { titleFilm } from "./film.js";
 
 let peopleNow = "";
+let houseNow =  "";
 
-export function graphOver(people) {
+export function graphOver(people, house) {
     peopleNow = people;
+    houseNow = house;
     const averageFilms = averagePerPerson();
     creeBarCharVer(averageFilms);
  
     const CardScreen = document.querySelector(".totalScreen"); // TODO Changer l'id en focntion de l'élément
     CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
- 
-    // Création de la carte à afficher au survol
-    createHoverCard();
+
 }
  
-function createHoverCard() {
-    const card = document.createElement("div");
-    card.classList.add("hp-quiz-card", "hide"); // hide est une classe pour cacher la carte initialement
-    card.innerHTML = `
-        <div class="card">
-            <div class="sidebar">
-                <a href="#" class="menu-item">HOME</a>
-                <a href="#" class="menu-item">POSTS</a>
-                <a href="#" class="menu-item active">DESCRIPTION</a>
-            </div>
-            <div class="content">
-                <h1>[Name Surname]</h1>
-                <p>[Bloodline]</p>
-                <p>[Gender]</p>
-                <p>[Description]</p>
-                <div class="house">GRYFFINDOR</div>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(card);
-}
+
 
 function showCard(e) {
     const card = document.querySelector(".hp-quiz-card");
@@ -49,6 +30,7 @@ function showCard(e) {
 
     if (!(hover.textContent = ((currentName) == ""))) {
         const dataCaracter = filmCaracters.find((e) => e.Name == currentName)
+        const currrentHouse =  dataCaracter.House;
         if (card) {
             card.classList.remove("hide");
             card.style.position = "fixed";
@@ -60,6 +42,7 @@ function showCard(e) {
             document.querySelector('.content p:nth-child(2)').textContent = dataCaracter.Blood;
             document.querySelector('.content p:nth-child(3)').textContent = dataCaracter.Gender;
             document.querySelector('.content p:nth-child(4)').textContent = dataCaracter.Descr;
+            document.querySelector('.house').textContent= houseNow;
         }
     }
 }
@@ -72,26 +55,6 @@ function hideCard() {
 }
 
 
-function titleFilm(num) {
-    let title = "";
-    let descr = "";
-    let time = "";
-    switch (num) {
-        case 1:
-            title = "Harry Potter and the Sorcerer's Stone"
-            descr = "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
-            time = "152:00:00"
-            break;
-        case 2:
-            title = "Harry Potter and the Chamber of Secrets"
-            descr = "An ancient prophecy seems to be coming true when a mysterious presence begins stalking the corridors of a school of magic and leaving its victims paralyzed."
-            time = "161:00:00"
-            break;
-        default:
-            break;
-    }
-    return [title, descr, time];
-}
  
 function timesOfFilm(filmTitle) {
     let filmRows = filmTime.filter((e) => e.Movie === filmTitle);

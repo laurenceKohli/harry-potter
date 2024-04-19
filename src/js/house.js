@@ -3,7 +3,7 @@ import { gryffindor } from "./gryffindor";
 import  { slytherin } from "./slytherin";
 import { ravenclaw } from "./ravenclaw";
 import { hufflepuff } from "./hufflepuff";
-import { Scene } from "scrollmagic";
+//import { Scene } from "scrollmagic";
 
 let houseName = "";
 

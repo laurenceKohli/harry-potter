@@ -65,7 +65,7 @@ export function displayFilm(num, house = "Gryffindor") {
 
     creeBarCharHor(times3prems);
 
-    graphOver(people);
+    graphOver(people, houseNow);
 
     creeBarCharAverage()
     
@@ -91,6 +91,7 @@ function titleFilm(num) {
     }
     return [title, descr, time];
 }
+export {titleFilm};
 
 function timesOfFilm(filmTitle) {
     let filmRows = filmTime.filter((e) => e.Movie === filmTitle);
