@@ -2,6 +2,7 @@
 * {
   font-family: "Akaya Kanadaka", sans-serif;
   font-size: 14px;
+  color: var(--text-color);
 }
 
 h1 {

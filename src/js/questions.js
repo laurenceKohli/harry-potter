@@ -61,7 +61,7 @@ export const questionsUser = {
 };
 
 export function displayQuestion(id){
-  const section = document.getElementById("questions");
+  const section = document.getElementById("question");
    const questionElement = document.createElement("div");
    questionElement.innerHTML = `<h3>${questionsUser[id].question}</h3>`;
 

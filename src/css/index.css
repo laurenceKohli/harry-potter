@@ -4,5 +4,10 @@
 /* Project */
 @import 'variables.css';
 @import 'typography.css';
+@import 'intro.css';
 @import 'result.css';
 @import 'card.css';
+
+section{
+    height: 100%;
+}

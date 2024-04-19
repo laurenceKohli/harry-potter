@@ -1,12 +1,14 @@
 :root {
   /* Colors */
-  --primary-color: #0474ff;
-  --primary-color-dark: #002450;
-  --secondary-color: #181818;
-  --bg-color: #121212;
+  --gryffindor-primary-color: #6C1A31;
+  --gryffindor-secondary-color: #D37E01;
+  --hufflepuff-primary-color: #BA7625;
+  --hufflepuff-secondary-color: #5E3225;
+  --ravenclaw-primary-color: #063E53;
+  --ravenclaw-secondary-color: #799ABF;
+  --slytherin-primary-color: #134731;
+  --slytherin-secondary-color: #88898D;
   --text-color: #fff;
-  --border-color: #272727;
-  --grey-light: #9c9c9c;
 
   /* Globals */
   --border-radius: 10px;
