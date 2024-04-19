@@ -4,6 +4,7 @@ import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { axisRight } from "d3-axis";
 import { titleFilm } from "./film.js";
+import "../css/variables.css"
 
 let peopleNow = "";
 let houseNow =  "";
@@ -17,7 +18,7 @@ export function graphOver(people, house) {
     const CardScreen = document.querySelector(".totalScreen"); // TODO Changer l'id en focntion de l'élément
     CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
-
+return houseNow;
 }
  
 
@@ -36,12 +37,18 @@ function showCard(e) {
             card.style.left = "50%";
             card.style.top = "50%";
             card.style.transform = "translate(-50%, -50%)";
-            card.style.zIndex = "1000"; // Assurez-vous que la carte est au-dessus des autres éléments
+            card.style.zIndex = "1000";
+            card.querySelector('.hp-quiz-card .sidebar').style.backgroundColor = `var(--${houseNow}-primary-card-color)`;
+            card.querySelector('.hp-quiz-card .menu-item.active ').style.backgroundColor = `var(--${houseNow}-secondary-card-color)`;
+            card.querySelector('.hp-quiz-card .card').style.backgroundColor = `var(--${houseNow}-background-card-color)`;
+            card.querySelector('.hp-quiz-card .house ').style.color = `var(--${houseNow}-secondary-card-color)`;
             hover.textContent = (e.target.classList.value == "")? "NaN" : e.target.classList.value;
             document.querySelector('.content p:nth-child(2)').textContent = dataCaracter.Blood;
             document.querySelector('.content p:nth-child(3)').textContent = dataCaracter.Gender;
             document.querySelector('.content p:nth-child(4)').textContent = dataCaracter.Descr;
             document.querySelector('.house').textContent= houseNow;
+            console.log(houseNow);
+
         }
     }
 }
@@ -142,7 +149,8 @@ function creeBarCharVer(donnees){
             .attr("width", 30)
             .attr("height", (d, i) => height - yScale(d.ScreenTime))
             .attr("class", d => d.Character)
-            .attr("fill", (d, i) => (i%2 == 0) ? "#740001" : "#D37E01"));
+            .attr("fill", (d, i) => (i%2 == 0) ? `var(--${houseNow}-secondary-card-color)` : `var(--${houseNow}-secondary-color)`));
+            // TODO a remplacer par ${houseNow} à la place du nom de la maison
  
 
             const axis = axisRight(yScale)

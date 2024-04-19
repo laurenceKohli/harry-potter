@@ -13,8 +13,6 @@
 
 .hp-quiz-card .card {
     display: flex;
-    background-color: #4F3636;
-    /* Couleur de fond de la carte */
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Ombre de la carte */
@@ -31,7 +29,6 @@
 .hp-quiz-card .sidebar {
     width: 200px;
     height: 500px;
-    background-color: #560C0E;
     padding: 20px;
 }
 
@@ -49,14 +46,12 @@
 }
 
 .hp-quiz-card .menu-item.active {
-    background-color: #740001;
     padding: 10px;
     border-radius: 30px;
 }
 
 
 .hp-quiz-card .house {
-    color: #740001;
     text-align: center;
     margin-top: 30px;
     font-weight: bold;

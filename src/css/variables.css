@@ -1,16 +1,41 @@
 :root {
   /* Colors */
-  --gryffindor-primary-color: #6C1A31;
-  --gryffindor-secondary-color: #D37E01;
-  --hufflepuff-primary-color: #BA7625;
-  --hufflepuff-secondary-color: #5E3225;
-  --ravenclaw-primary-color: #063E53;
-  --ravenclaw-secondary-color: #799ABF;
-  --slytherin-primary-color: #134731;
-  --slytherin-secondary-color: #88898D;
-  --text-color: #fff;
+  --Gryffindor-primary-color: #6C1A31;
+  --Gryffindor-secondary-color: #D37E01;
+  --Hufflepuff-primary-color: #BA7625;
+  --Hufflepuff-secondary-color: #5E3225;
+  --Ravenclaw-primary-color: #063E53;
+  --Ravenclaw-secondary-color: #799ABF;
+  --Slytherin-primary-color: #134731;
+  --Slytherin-secondary-color: #88898D;
+
+  --Gryffindor-background-card-color: #4F3636;
+  --Gryffindor-primary-card-color: #560C0E;
+  --Gryffindor-secondary-card-color: #740001;
+  --GryffindorV2-primary-card-color: #CD8B29;
+  --GryffindorV2-secondary-card-color: #D37E01;
+
+  --Hufflepuff-background-card-color: #908362;
+  --Hufflepuff-primary-card-color: #977019;
+  --Hufflepuff-secondary-card-color: #C2931B;
+  --HufflepuffV2-primary-card-color: #644238;
+  --HufflepuffV2-secondary-card-color: #5E3225;
+
+  --Ravenclaw-background-card-color: #292735;
+  --Ravenclaw-primary-card-color: #1D1535;
+  --Ravenclaw-secondary-card-color: #100836;
+  --RavenclawV2-primary-card-color: #6E7C8C;
+  --RavenclawV2-secondary-card-color: #799ABF;
+
+  --Slytherin-background-card-color: #48574D;
+  --Slytherin-primary-card-color: #004026;
+  --Slytherin-secondary-card-color: #0E4722;
+  --SlytherinV2-primary-card-color: #6D6E72;
+  --SlytherinV2-secondary-card-color: #88898D;
+
 
   /* Globals */
+  --text-color: #ffffff;
   --border-radius: 10px;
 
   /* Animations */
