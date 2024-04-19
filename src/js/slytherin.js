@@ -33,6 +33,6 @@ const slytherin = {
 };
 
 
-const personnesSlytherin = characters.filter((e) => e.School.match("slytherin"));
+const personnesSlytherin = characters.filter((e) => e.School.match("Slytherin"));
 
 export {slytherin, personnesSlytherin}

@@ -19,7 +19,6 @@
 - ajouter films manquants (fonction titleFilm)
 - exporter fonction titleFilm
 - enlever stat final de ce document
-- compléter switch case houseChoosen
 - CSS page
 - scroll vertical partie Main characters
 - scroll partie ScreenTime per film
@@ -29,7 +28,6 @@
 - affichage vif or (Graph 20 characters)
 
 ## graphHover.js
-- importer fonction titleFilm
 - CSS page
 - CSS cartes des autres maisons (si possible à travers variables globales)
 - tester graphique pour chaque maison

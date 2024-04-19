@@ -18,7 +18,7 @@ export function houseBasics(name) {
     case "slytherin":
       houseName = slytherin;
       break;
-    case "hufflepuf":
+    case "hufflepuff":
       houseName = hufflepuff;
       break;
     default:

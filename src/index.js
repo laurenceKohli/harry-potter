@@ -6,8 +6,8 @@
 import { houseBasics } from "./js/house";
 import { displayFilm } from "./js/film";
 
-houseBasics("gryffindor");
-displayFilm(1,"gryffindor");
+houseBasics("ravenclaw");
+displayFilm(1,"ravenclaw");
 
 
 //questions

@@ -33,6 +33,6 @@ const ravenclaw = {
 };
 
 
-const personnesRavenclaw = characters.filter((e) => e.School.match("ravenclaw"));
+const personnesRavenclaw = characters.filter((e) => e.School.match("Ravenclaw"));
 
 export {ravenclaw, personnesRavenclaw}

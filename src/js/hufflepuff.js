@@ -33,6 +33,6 @@ const hufflepuff = {
 };
 
 
-const personnesHufflepuff = characters.filter((e) => e.School.match("hufflepuff"));
+const personnesHufflepuff = characters.filter((e) => e.School.match("Hufflepuff"));
 
 export {hufflepuff, personnesHufflepuff}

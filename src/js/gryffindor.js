@@ -32,6 +32,6 @@ const gryffindor = {
     },
 }
 
-const personnesGryffondor = characters.filter((e) => e.School.match("Gryffindor"));
+const personnesGryffindor = characters.filter((e) => e.School.match("Gryffindor"));
 
-export {gryffindor, personnesGryffondor}
+export {gryffindor, personnesGryffindor}
