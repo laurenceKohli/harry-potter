@@ -13,11 +13,8 @@
 # ToDo
 ## index.js
 - faire afficher uniquement le début de la page questions
-- enlever fonction dispalyQuestions
 
 ## film.js
-- ajouter films manquants (fonction titleFilm)
-- exporter fonction titleFilm
 - enlever stat final de ce document
 - CSS page
 - scroll vertical partie Main characters
@@ -30,7 +27,6 @@
 ## graphHover.js
 - CSS page
 - CSS cartes des autres maisons (si possible à travers variables globales)
-- tester graphique pour chaque maison
 - ajouter Dobby
 
 ## questions.js
@@ -40,7 +36,6 @@
 - CSS intro
 - import fonction pour switch de maison
 - scroll vertical entre questions
-- ajouter ici fonction pour display 1 question à la fois (base depuis index.js)
 
 ## house.js
 - fonction pour expliquer pourquoi on est dans cette maison

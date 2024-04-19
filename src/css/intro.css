@@ -4,6 +4,16 @@ body{
 }
 
 #quiz img{
+    height: 300px;
+    display: block;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+#question {
+    display: flex;
+}
+
+#question img{
     height: 275px;
-    position: center;
 }
