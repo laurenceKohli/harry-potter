@@ -30,7 +30,6 @@ function showCard(e) {
 
     if (!(hover.textContent = ((currentName) == ""))) {
         const dataCaracter = filmCaracters.find((e) => e.Name == currentName)
-        const currrentHouse =  dataCaracter.House;
         if (card) {
             card.classList.remove("hide");
             card.style.position = "fixed";
