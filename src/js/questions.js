@@ -62,11 +62,18 @@ export const questionsUser = {
 
 export function displayQuestion(id){
   const section = document.getElementById("question");
+  section.innerHTML = "";
+  const imageDiv = document.createElement("div");
+  const image = document.createElement("img");
+  image.src = `/assets/img/questions/question-${id}.png`
+
+  imageDiv.appendChild(image);
+
    const questionElement = document.createElement("div");
    questionElement.innerHTML = `<h3>${questionsUser[id].question}</h3>`;
 
    console.log(questionsUser[id].reponse)
-    const answersList = document.createElement("ul");
+    const answersList = document.createElement("ol");
 
     for (const [key, value] of Object.entries(questionsUser[id].reponse)) {
       const answerItem = document.createElement("li");
@@ -75,5 +82,5 @@ export function displayQuestion(id){
     }
  
     questionElement.appendChild(answersList);
-    section.appendChild(questionElement);
+    section.append(imageDiv, questionElement);
 }

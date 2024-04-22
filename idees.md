@@ -32,10 +32,9 @@
 ## questions.js
 - gestion comptage point
 - gestion clic sur réponses et enregistrement points
-- CSS question
-- CSS intro
+
 - import fonction pour switch de maison
-- scroll vertical entre questions
+- ?? scroll vertical entre questions
 
 ## house.js
 - fonction pour expliquer pourquoi on est dans cette maison
@@ -51,4 +50,3 @@
   -> inclure stat finale ici ??
   -> fonction pour switch de maison EXPORT
 - ajout images Maisons (lion, serpent, ...) et fond dans assets/img/maisons
-- CSS/variables : mettre couleurs par maison dans variables

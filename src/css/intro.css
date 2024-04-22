@@ -1,6 +1,13 @@
-body{
-    background-image: url("../../assets/img/background-intro.jpg");
+.intro {
+    background-color: #7a5757;
+    background-image: url("../../assets/img/background-intro.png");
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#quiz{
+    flex-direction: column;
 }
 
 #quiz img{
@@ -10,10 +17,21 @@ body{
     margin-bottom: 70px;
 }
 
-#question {
-    display: flex;
+#quiz p{
+    font-size: 2.5rem;
+}
+
+#question{
+    padding: 100px 0;
+    align-items: center;
 }
 
 #question img{
-    height: 275px;
+    height: 540px;
+    margin-right: 50px;
+}
+
+#question li{
+    font-size: 2rem;
+    margin: 15px;
 }

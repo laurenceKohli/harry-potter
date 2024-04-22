@@ -3,11 +3,8 @@
 
 /* Project */
 @import 'variables.css';
+@import 'structure.css';
 @import 'typography.css';
 @import 'intro.css';
 @import 'result.css';
 @import 'card.css';
-
-section{
-    height: 100%;
-}

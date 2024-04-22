@@ -7,7 +7,14 @@ import { houseBasics } from "./js/house";
 import { displayFilm } from "./js/film";
 import { displayQuestion } from "./js/questions";
 
-houseBasics("ravenclaw");
-displayFilm(1,"ravenclaw");
+houseBasics("gryffindor");
+displayFilm(1,"gryffindor");
 
 displayQuestion(1);
+
+let index = 2;
+document.querySelector("#question").addEventListener("click", (e) => {
+  if (index==2) document.querySelector("#quiz").classList.remove("active")
+  displayQuestion(index);
+  index++;
+})

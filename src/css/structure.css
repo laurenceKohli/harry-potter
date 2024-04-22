@@ -1,0 +1,27 @@
+/********************************************************************************/
+/* html body */
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  /* body est un container flex en column */
+  display: flex;
+  flex-direction: column;
+}
+
+/********************************************************************************/
+/* sections */
+
+section {
+  padding: 0 30px;
+  display: none;
+  margin: auto;
+  max-width: 1000px;
+}
+
+section.active { /* avec la classe "active", on affiche la section */
+  display: flex;
+}

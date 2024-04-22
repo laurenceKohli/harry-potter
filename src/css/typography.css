@@ -9,19 +9,6 @@ h1 {
   font-size: 4rem;
 }
 
-h1.hero {
-  font-size: 4.5rem;
-  font-weight: 100;
-  text-align: center;
-}
-
-/* le hero est beaucoup trop grand en mobile. On réduit la taille de police pour qu'il passe dans le viewport */
-@media (max-width: 768px) {
-  h1.hero {
-    font-size: 3.5rem;
-  }
-}
-
 h2 {
   font-size: 3.5rem;
 }
@@ -40,9 +27,4 @@ h5 {
 
 h6 {
   font-size: 1.5rem;
-}
-
-/* on va centrer verticalement par défaut, au lieu d'aligner à la baseline */
-.material-icons {
-  vertical-align: middle;
 }
