@@ -46,6 +46,9 @@
 - CSS page
 
 ## Autres
+- Ajouter dans le CSS de results.css dans .film
+    position: sticky;
+    top: 0; 
 - lier film, house, graphOver de manière adéquate (autre fichier ?) 
   -> inclure stat finale ici ??
   -> fonction pour switch de maison EXPORT
