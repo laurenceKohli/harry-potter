@@ -5,10 +5,12 @@
 
 import { houseBasics } from "./js/house";
 import { displayFilm } from "./js/film";
+import { displayHover } from "./js/displayHover";
 import { displayQuestion } from "./js/questions";
 
 houseBasics("gryffindor");
 displayFilm(1,"gryffindor");
+displayHover("gryffindor");
 
 displayQuestion(1);
 

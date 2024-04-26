@@ -5,7 +5,6 @@ import { personnesGryffindor } from "./gryffindor";
 import { personnesRavenclaw } from "./ravenclaw";
 import { personnesHufflepuff } from "./hufflepuff";
 import { personnesSlytherin } from "./slytherin";
-import { graphOver } from "./graphHover";
 
 let houseNow = "";
 let people = "";
@@ -56,33 +55,14 @@ export function displayFilm(num, house = "Gryffindor") {
 
   div.append(title, filmTitle, descr, screenTime);
 
-  const totalScreen = document.createElement("div");
-  const titleTotal = document.createElement("h1");
-  titleTotal.textContent = "Graph of the 20th more Screentimed characters";
-  totalScreen.classList.add("totalScreen");
 
-  totalScreen.append(titleTotal);
-
-  const average = document.createElement("div");
-  const averageTitle = document.createElement("h1");
-  averageTitle.textContent = "Average screentime per House";
-  averageTitle.classList.add("averageScreen");
-
-  const averageInfo = document.createElement("p");
-  averageInfo.textContent = "Click to see the others Houses";
-
-  average.append(averageTitle, averageInfo);
-
-  section.append(div, totalScreen, average);
+  section.append(div);
 
   const times = timesOfFilm(film[0]);
   const times3prems = times.slice(0, 3);
   console.log(times3prems);
 
   creeBarCharHor(times3prems);
-
-  graphOver(people, houseNow);
-
   creeBarCharAverage();
 }
 
