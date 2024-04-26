@@ -72,7 +72,6 @@ export function displayQuestion(id){
    const questionElement = document.createElement("div");
    questionElement.innerHTML = `<h3>${questionsUser[id].question}</h3>`;
 
-   console.log(questionsUser[id].reponse)
     const answersList = document.createElement("ol");
 
     for (const [key, value] of Object.entries(questionsUser[id].reponse)) {

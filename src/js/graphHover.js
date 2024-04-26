@@ -3,22 +3,35 @@ import filmCaracters from "../../data/HPCharactersData.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { axisRight } from "d3-axis";
-import { titleFilm } from "./film.js";
-import "../css/variables.css"
+import { titleFilm } from "./displayAllInfos";
+import { tempsEnMilliseconds, tempsEnMinutes } from "./utils";
 
+const section = document.querySelector("#house");
 let peopleNow = "";
-let houseNow =  "";
+let houseNow = "";
 
-export function graphOver(people, house) {
+export function displayHover(people, house) {
     peopleNow = people;
     houseNow = house;
+  const totalScreen = document.createElement("div");
+  const titleTotal = document.createElement("h1");
+  titleTotal.textContent = "Graph of the 20th more Screentimed characters";
+  totalScreen.classList.add("totalScreen");
+
+  totalScreen.append(titleTotal);
+
+  section.append(totalScreen);
+
+  graphOver();
+}
+
+function graphOver() {
     const averageFilms = averagePerPerson();
     creeBarCharVer(averageFilms);
  
     const CardScreen = document.querySelector(".totalScreen"); // TODO Changer l'id en focntion de l'élément
     CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
-return houseNow;
 }
  
 
@@ -59,8 +72,6 @@ function hideCard() {
         card.classList.add("hide");
     }
 }
-
-
  
 function timesOfFilm(filmTitle) {
     let filmRows = filmTime.filter((e) => e.Movie === filmTitle);
@@ -80,7 +91,7 @@ function timesOfFilm(filmTitle) {
 
 function averagePerPerson(){
     let tempsTotal = [];
-    for (let index = 1; index < 3; index++) {
+    for (let index = 1; index < 8; index++) {
         const film = titleFilm(index);
         const times = timesOfFilm(film[0]);
         times.forEach(personne => {
@@ -98,33 +109,6 @@ function averagePerPerson(){
     }
     return tempsTotal.sort((a, b) => (b.ScreenTime) - (a.ScreenTime));
 }
- 
-function tempsEnMilliseconds(temps) {
-    const parties = temps.split(':');
-    const minutes = parties[0] == "" ? 0 : parseInt(parties[0], 10);
-    const secondes = parties[1] == "" ? 0 : parseInt(parties[1], 10);
-    const millisecondes = parties[2] ? parseInt(parties[2], 10) : 0;
-    return (minutes * 60 * 1000) + (secondes * 1000) + millisecondes;
-}
-
-function tempsEnMinutes(temps){
-    // Convertir en secondes
-    let secondes = Math.floor((temps / 1000) % 60);
-    // Convertir en minutes
-    let minutes = Math.floor((temps / (1000 * 60)));
-
-    // Ajouter un zéro devant les chiffres < 10 pour formater correctement
-    if (secondes < 10) {
-        secondes = "0" + secondes;
-    }
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-
-    // Retourner le temps formaté
-    return minutes + ":" + secondes;
-}
- 
 
 function creeBarCharVer(donnees){
     //svg

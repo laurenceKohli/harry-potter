@@ -2,15 +2,10 @@
 
 // @rollup/plugin-dsv
 // import populationData from "../data/population_total.csv";
-
-import { houseBasics } from "./js/house";
-import { displayFilm } from "./js/film";
-import { displayHover } from "./js/displayHover";
 import { displayQuestion } from "./js/questions";
+import { displayResult } from "./js/displayAllInfos";
 
-houseBasics("gryffindor");
-displayFilm(1,"gryffindor");
-displayHover("gryffindor");
+displayResult("gryffindor");
 
 displayQuestion(1);
 

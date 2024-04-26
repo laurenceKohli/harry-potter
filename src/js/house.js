@@ -8,23 +8,7 @@ import { hufflepuff } from "./hufflepuff";
 let houseName = "";
 
 export function houseBasics(name) {
-  switch (name) {
-    case "gryffindor":
-      houseName = gryffindor;
-      break;
-    case "ravenclaw":
-      houseName = ravenclaw;
-      break;
-    case "slytherin":
-      houseName = slytherin;
-      break;
-    case "hufflepuff":
-      houseName = hufflepuff;
-      break;
-    default:
-      break;
-  }
-
+ houseName = name;
   const div = document.createElement("div");
   div.classList.add("houseBasics");
 

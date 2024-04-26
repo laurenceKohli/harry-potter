@@ -1,7 +1,6 @@
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
-import { houseBasics } from "./house";
-import { displayFilm } from "./film";
+import { displayResult } from "./displayAllInfos";
 
 const section = document.querySelector("#house");
 
@@ -62,18 +61,13 @@ function graphAverageScreen() {
     clicAverageScreen();
 }
 
-export function clicAverageScreen() {
+function clicAverageScreen() {
     const averageScreen = document.querySelector(".averageScreen svg");
     averageScreen.addEventListener("click", (e) => {
         const rect = e.target.closest("rect");
         if (rect) {
             const house = rect.getAttribute('fill').split("--")[1].split("-")[0].toLowerCase();
-            //displayResult(house);
-            section.innerHTML = "";
-            houseBasics(house);
-            displayFilm(1, house);
-            console.log(house);
-            document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
+            displayResult(house);
             window.scrollTo({
                 top: 0,
                 behavior: 'instant'
