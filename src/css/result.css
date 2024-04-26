@@ -1,3 +1,9 @@
+.fondhouse {
+  background-image: url("../../assets/img/fond-gryffindor.png");
+  background-size: cover;
+  background-repeat:repeat-y;
+}
+
 .sticky{
   position: sticky;
   top : 0;

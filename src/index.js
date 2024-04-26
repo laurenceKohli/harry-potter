@@ -15,6 +15,14 @@ displayQuestion(1);
 let index = 2;
 document.querySelector("#question").addEventListener("click", (e) => {
   if (index==2) document.querySelector("#quiz").classList.remove("active")
-  displayQuestion(index);
-  index++;
+  if (index<7) {
+    displayQuestion(index);
+    index++;
+  } else {
+    document.querySelector("#house").classList.add("active")
+    document.querySelector("#question").classList.remove("active")
+    document.querySelector("body").classList.remove("intro")
+    document.querySelector("body").classList.add("fondhouse")
+  }
+ 
 })
