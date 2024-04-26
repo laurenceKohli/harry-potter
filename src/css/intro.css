@@ -6,10 +6,6 @@
     background-repeat: no-repeat;
 }
 
-#quiz{
-    flex-direction: column;
-}
-
 #quiz img{
     height: 300px;
     display: block;
@@ -24,6 +20,7 @@
 #question{
     padding: 100px 0;
     align-items: center;
+    flex-direction: row;
 }
 
 #question img{

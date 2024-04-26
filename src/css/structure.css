@@ -22,6 +22,7 @@ section {
   max-width: 1000px;
 }
 
-section.active { /* avec la classe "active", on affiche la section */
+section.active, section.active section { /* avec la classe "active", on affiche la section */
   display: flex;
+  flex-direction: column;
 }
