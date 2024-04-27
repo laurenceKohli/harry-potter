@@ -1,3 +1,5 @@
+import { displayResult } from "./displayAllInfos";
+
 export const questionsUser = {
   1: {
     question:
@@ -52,10 +54,10 @@ export const questionsUser = {
   6: {
     question: "What kind of books attract you the most?",
     reponse: {
-        "Science and knowledge books": "R",
-        "Epic adventures": "G",
-        "Books on mysteries": "S",
-        "Tales and family stories": "H",
+        "Science and knowledge books (R)": "R",
+        "Epic adventures (G)": "G",
+        "Books on mysteries (S)": "S",
+        "Tales and family stories (H)": "H",
     },
   },
 };
@@ -82,4 +84,40 @@ export function displayQuestion(id){
  
     questionElement.appendChild(answersList);
     section.append(imageDiv, questionElement);
+}
+
+export function answerChoosen(index, answer){
+  console.log(questionsUser[index].reponse[answer]);
+  const initalChoosen = questionsUser[index].reponse[answer]; 
+  if(index == 6)  finalAnswer(initalChoosen)
+}
+
+function finalAnswer(initalChoosen){
+  document.querySelector("#house").classList.add("active")
+  document.querySelector("#question").classList.remove("active")
+  document.querySelector("body").classList.remove("intro")
+  document.querySelector("body").classList.add("fondhouse")
+  displayResult(getfinalHouse(initalChoosen));
+}
+
+function getfinalHouse(initial){
+  let house = "";
+  switch (initial) {
+    case "G" :
+      house = "gryffindor";
+      break;
+    case "R" :
+      house = "ravenclaw";
+      break;
+    case "H":
+      house = "hufflepuff";
+      break;
+    case "S":
+     house = "slytherin";
+      break;
+
+    default:
+      break;
+  }
+  return house;
 }

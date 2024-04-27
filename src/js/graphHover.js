@@ -91,7 +91,7 @@ function timesOfFilm(filmTitle) {
 
 function averagePerPerson(){
     let tempsTotal = [];
-    for (let index = 1; index < 8; index++) {
+    for (let index = 1; index < 9; index++) {
         const film = titleFilm(index);
         const times = timesOfFilm(film[0]);
         times.forEach(personne => {

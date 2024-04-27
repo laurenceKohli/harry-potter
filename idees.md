@@ -33,7 +33,6 @@
 - gestion comptage point
 - gestion clic sur réponses et enregistrement points
 
-- import fonction pour switch de maison
 - ?? scroll vertical entre questions
 
 ## house.js
@@ -41,15 +40,10 @@
 - CSS page
 
 ## stat final
-- fonction pour afficher average screetime per House
-- import fonction pour switch de maison
 - CSS page
 
 ## Autres
 - Ajouter dans le CSS de results.css dans .film
     position: sticky;
     top: 0; 
-- lier film, house, graphOver de manière adéquate (autre fichier ?) 
-  -> inclure stat finale ici ??
-  -> fonction pour switch de maison EXPORT
-- ajout images Maisons (lion, serpent, ...) et fond dans assets/img/maisons
+- ajout images Maisons (lion, serpent, ...)
