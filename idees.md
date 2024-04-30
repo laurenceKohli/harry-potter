@@ -15,25 +15,23 @@
 - faire afficher uniquement le début de la page questions
 
 ## film.js
-- enlever stat final de ce document
 - CSS page
-- scroll vertical partie Main characters
 - scroll partie ScreenTime per film
 
-- affichage vif or (Main characters)
 - affichage vif or / pas (ScreenTime per film)
 - affichage vif or (Graph 20 characters)
 
 ## graphHover.js
 - CSS page
-- CSS cartes des autres maisons (si possible à travers variables globales)
 - ajouter Dobby
+- enlever carte Total Screen qui s'affiche au coin à droite
 
 ## questions.js
 - gestion comptage point
 - gestion clic sur réponses et enregistrement points
 
 - ?? scroll vertical entre questions
+- ?? passage rapide du choixpeau ??
 
 ## house.js
 - fonction pour expliquer pourquoi on est dans cette maison
@@ -43,7 +41,3 @@
 - CSS page
 
 ## Autres
-- Ajouter dans le CSS de results.css dans .film
-    position: sticky;
-    top: 0; 
-- ajout images Maisons (lion, serpent, ...)
