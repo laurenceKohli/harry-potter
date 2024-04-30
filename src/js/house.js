@@ -1,14 +1,9 @@
 const mainSection = document.querySelector("#house");
-import { gryffindor } from "./gryffindor";
-import  { slytherin } from "./slytherin";
-import { ravenclaw } from "./ravenclaw";
-import { hufflepuff } from "./hufflepuff";
-//import { Scene } from "scrollmagic";
 
 let houseName = "";
 
-export function houseBasics(name) {
- houseName = name;
+export function houseBasics(nameData) {
+ houseName = nameData;
   const div = document.createElement("div");
   div.classList.add("houseBasics");
 
@@ -27,8 +22,16 @@ function displayBasics(){
   const title = document.createElement("h1");
   title.textContent = houseName.quote;
 
+  const iconHouse = document.createElement("IMG");
+  iconHouse.src = houseName.icon;
+  iconHouse.setAttribute('id', 'icon');
+
   const basic = document.createElement("div");
   basic.classList.add("basics");
+
+  const iconHouseBig = document.createElement("IMG");
+  iconHouseBig.src = houseName.bigIcon;
+  iconHouseBig.setAttribute('id', 'bigIcon');
 
   const animal = document.createElement("h2");
   animal.textContent = "Animal";
@@ -55,9 +58,10 @@ function displayBasics(){
   trait.textContent = "Traits";
 
   const pTrait = document.createElement("p");
-  pTrait.textContent = houseName.traits;
+  pTrait.innerHTML = houseName.traits;
 
   basic.append(
+    iconHouseBig,
     animal,
     pAnimal,
     elem,
@@ -70,7 +74,7 @@ function displayBasics(){
     pTrait
   );
 
-  section.append(title, basic);
+  section.append(title, iconHouse, basic);
   return section;
 }
 
@@ -81,6 +85,10 @@ function displayMainCharacters(){
   const title = document.createElement("h2");
   title.textContent = "The 3 mains characters"
   title.setAttribute('id', 'mainCharactersTitle');
+
+  const vifOr = document.createElement("IMG");
+  vifOr.setAttribute('id', 'vifor');
+  vifOr.src = "../../assets/img/vifOr.png";
 
   const char = document.createElement("div");
   char.classList.add("characters");
@@ -122,19 +130,40 @@ function displayMainCharacters(){
   main3.append(img3, name3, descr3);
 
   char.append(main1, main2, main3);
-  section.append(title, char);
+  section.append(title, vifOr, char);
 
   return section;
 }
 
 window.addEventListener('scroll', function() {
-  if(document.querySelector('#third').getBoundingClientRect().top < 110){
+  if(document.querySelector('#third').getBoundingClientRect().top < 65){
     document.querySelector('#mainCharactersTitle').classList.remove("sticky")
     console.log("pas sticky");
   } else {
     document.querySelector('#mainCharactersTitle').classList.add("sticky");
   }
 })
+
+export function charactersWidth(){
+  // Sélectionnez toutes les divs avec la classe "box"
+const boxes = document.querySelectorAll('.mainCharacter');
+
+// Initialiser une variable pour stocker la hauteur maximale
+let maxHeight = 0;
+
+// Boucle à travers chaque div et trouver la hauteur maximale
+boxes.forEach(box => {
+    const height = box.offsetHeight;
+    if (height > maxHeight) {
+        maxHeight = height;
+    }
+});
+
+// Appliquer la hauteur maximale à toutes les divs
+boxes.forEach(box => {
+    box.style.height = maxHeight + 'px';
+});
+}
 
 // window.addEventListener('scroll', function() {
 //   const section = document.querySelector('#mainCharacters');

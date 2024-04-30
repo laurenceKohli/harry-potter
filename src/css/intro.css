@@ -15,6 +15,14 @@
 
 #quiz p{
     font-size: 2.5rem;
+    font-family: "Akaya Kanadaka", sans-serif;
+}
+
+#hat{
+    position: absolute;
+    right: -170px;
+    top : 620px;
+    z-index: 10;
 }
 
 #question{

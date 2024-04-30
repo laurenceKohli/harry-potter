@@ -4,8 +4,9 @@ import { personnesHufflepuff, hufflepuff } from "./hufflepuff";
 import { personnesSlytherin, slytherin } from "./slytherin";
 import { displayFilm } from "./film";
 import { displayAverage } from "./swapHouse";
-import { houseBasics } from "./house";
+import { houseBasics, charactersWidth } from "./house";
 import { displayHover } from "./graphHover";
+import { vifOrMvt } from "./vifOr";
 
 let houseNow = "";
 let people = "";
@@ -39,12 +40,15 @@ function houseChoosen(house) {
       break;
   }
 }
+let id = 1;
 
 export function displayResult(house){
     houseChoosen(house);
 
     section.innerHTML = "";
-    document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
+    if(!document.body.classList.contains("intro")){
+      document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
+    }
 
     houseBasics(houseData);
   
@@ -58,6 +62,13 @@ export function displayResult(house){
     displayHover(people, houseNow);
 
     displayAverage();
+
+    charactersWidth();
+
+    if(id == 2){
+      vifOrMvt(id);
+    }
+    id++;
 
 }
 

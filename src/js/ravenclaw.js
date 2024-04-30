@@ -10,10 +10,12 @@ let description3 = HPDataRow3.Descr;
 
 const ravenclaw = {
     "quote" : "Ravenclaw, where those of wit and learning, will always find their kind!",
+    "icon" : "../../assets/img/icon-house-ravenclaw.png",
+    "bigIcon" : "../../assets/img/big-icon-house-ravenclaw.png",
     "animal" : "Eagle",
     "element" : "Air",
     "colors" : "Blue and bronze",
-    "traits" : "Intelligence, Wisdom, Creativity, Originality, Individuality, Acceptance",
+    "traits" : "Intelligence,<br> Wisdom,<br> Creativity,<br> Originality,<br> Individuality,<br> Acceptance",
     "founder" : "Rowena Ravenclaw",
     "main1" : {
         "name" : "Luna Lovegood",

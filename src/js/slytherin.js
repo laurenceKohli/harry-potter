@@ -10,10 +10,12 @@ let description3 = HPDataRow3.Descr;
 
 const slytherin = {
     "quote" : "Slytherin will help you on your way to greatness!",
+    "icon" : "../../assets/img/icon-house-slytherin.png",
+    "bigIcon" : "../../assets/img/big-icon-house-slytherin.png",
     "animal" : "Snake",
     "element" : "Water",
     "colors" : "Green and silver",
-    "traits" : "Ambition, Cunning, Leadership, Resourcefulness, Self-Preservation, Determination",
+    "traits" : "Ambition,<br> Cunning,<br> Leadership,<br> Resourcefulness,<br> Self-Preservation,<br> Determination",
     "founder" : "Salazar Slytherin",
     "main1" : {
         "name" : "Severus Snape",

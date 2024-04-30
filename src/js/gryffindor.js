@@ -10,10 +10,12 @@ let description3 = HPDataRow3.Descr;
 
 const gryffindor = {
     "quote" : "Gryffindor, where dwell the brave at heart!",
+    "icon" : "../../assets/img/icon-house-gryffindor.png",
+    "bigIcon" : "../../assets/img/big-icon-house-gryffindor.png",
     "animal" : "Lion",
     "element" : "Fire",
     "colors" : "Scarlet and gold",
-    "traits" : "Daring, Nerve, Chivalry, Courage, Bravery, Determination",
+    "traits" : "Daring,<br> Nerve,<br> Chivalry,<br> Courage,<br> Bravery,<br> Determination",
     "founder" : "Godric Gryffindor",
     "main1" : {
         "name" : "Harry Potter",

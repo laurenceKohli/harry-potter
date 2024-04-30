@@ -10,10 +10,12 @@ let description3 = HPDataRow3.Descr;
 
 const hufflepuff = {
     "quote" : "Where they are just and loyal, those patient Hufflepuffs are true, and unafraid of toil!",
+    "icon" : "../../assets/img/icon-house-hufflepuff.png",
+    "bigIcon" : "../../assets/img/big-icon-house-hufflepuff.png",
     "animal" : "Badger",
     "element" : "Earth",
     "colors" : "Yellow and black",
-    "traits" : "Hard work, Dedication, Fairness, Patience, Loyalty, Kindness",
+    "traits" : "Hard work,<br> Dedication,<br> Fairness,<br> Patience,<br> Loyalty,<br> Kindness",
     "founder" : "Helga Hufflepuff",
     "main1" : {
         "name" : "Cedric Diggory",
