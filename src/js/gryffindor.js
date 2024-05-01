@@ -32,6 +32,19 @@ const gryffindor = {
         "descr" : description3,
         "img" : "../../assets/img/characters/ron-weasley.png",
     },
+    "parchement" : {
+        "img" : "../../assets/img/Vector-gryffindor.png",
+        "house" : "Gryffindor",
+        "houseMin" : "gryffindor", 
+        "adjective1" : "Courageous",
+        "adjective2" : "Brave",
+        "adjective3" : "Daring",
+        "quality1" : "Nerve",
+        "quality2" : "Chivalry",
+        "quality3" : "Determination",
+        "specificAction1" : "Bravery in the face of danger",
+        "specificAction2" : "Courage to stand up for what is right",
+    }
 }
 
 const personnesGryffindor = characters.filter((e) => e.School.match("Gryffindor"));

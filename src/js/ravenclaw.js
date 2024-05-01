@@ -32,6 +32,19 @@ const ravenclaw = {
         "descr" : description3,
         "img" : "../../assets/img/characters/filius-flitwick.png",
     },
+    "parchement" : {
+        "img" : "../../assets/img/Vector-ravenclaw.png",
+        "house" : "Ravenclaw",
+        "houseMin" : "ravenclaw", 
+        "adjective1" : "intelligent" ,
+        "adjective2" : "creative",
+        "adjective3" : "wise",
+        "quality1" : "individuality",
+        "quality2" : "intelligence",
+        "quality3" : "originality",
+        "specificAction1" : "Acceptance of others",
+        "specificAction2" : "Wisdom in decision-making",
+    }
 };
 
 

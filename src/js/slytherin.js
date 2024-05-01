@@ -32,6 +32,19 @@ const slytherin = {
         "descr" : description3,
         "img" : "../../assets/img/characters/bellatrix-lestrange.png",
     },
+    "parchement" : {
+        "img" : "../../assets/img/Vector-slytherin.png",
+        "house" : "Slytherin",
+        "houseMin" : "slytherin", 
+        "adjective1" : "ambitious" ,
+        "adjective2" : "cunning",
+        "adjective3" : "resourceful",
+        "quality1" : "determination",
+        "quality2" : "leadership",
+        "quality3" : "self-preservation",
+        "specificAction1" : "Resourcefulness in solving problems",
+        "specificAction2" : "Ambition to achieve their goals",
+    }
 };
 
 

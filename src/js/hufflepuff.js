@@ -32,6 +32,19 @@ const hufflepuff = {
         "descr" : description3,
         "img" : "../../assets/img/characters/pomona-sprout.png",
     },
+    "parchement" : {
+        "img" : "../../assets/img/Vector-hufflepuff.png",
+        "house" : "Hufflepuff",
+        "houseMin" : "hufflepuff",
+        "adjective1" : "patient",
+        "adjective2" : "loyal",
+        "adjective3" : "fair",
+        "quality1" : "kindness",
+        "quality2" : "dedication",
+        "quality3" : "hard-work",
+        "specificAction1" : "Loyalty to friends and family", 
+        "specificAction2" : "Dedication to a cause that is important to them",
+    }
 };
 
 

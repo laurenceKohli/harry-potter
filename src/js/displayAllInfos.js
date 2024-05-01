@@ -5,8 +5,10 @@ import { personnesSlytherin, slytherin } from "./slytherin";
 import { displayFilm } from "./film";
 import { displayAverage } from "./swapHouse";
 import { houseBasics, charactersWidth } from "./house";
+import { displayParchement } from "./parchement";
 import { displayHover } from "./graphHover";
 import { vifOrMvt } from "./vifOr";
+
 
 let houseNow = "";
 let people = "";
@@ -59,7 +61,10 @@ export function displayResult(house){
 
     displayFilm(1,people);
 
+
     displayHover(people, houseNow);
+
+    displayParchement(houseData);
 
     displayAverage();
 

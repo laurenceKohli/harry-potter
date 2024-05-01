@@ -10,6 +10,7 @@ body {
   /* body est un container flex en column */
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /********************************************************************************/
