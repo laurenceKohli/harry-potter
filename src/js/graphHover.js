@@ -44,7 +44,9 @@ function showCard(e) {
 
     if (!(hover.textContent = ((currentName) == ""))) {
         const dataCaracter = filmCaracters.find((e) => e.Name == currentName)
-        if (card) {
+        if ( currentName == "totalScreen" ){
+            //je ne veux afficher que ceux qui ont une carte à leur nom (totalScreen n'est pas dans Harry Potter ;-) )
+        }else if (card) {
             card.classList.remove("hide");
             card.style.position = "fixed";
             card.style.left = "50%";
