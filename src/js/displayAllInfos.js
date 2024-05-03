@@ -8,6 +8,7 @@ import { houseBasics, charactersWidth } from "./house";
 import { displayParchement } from "./parchement";
 import { displayHover } from "./graphHover";
 import { vifOrMvt } from "./vifOr";
+import { testScroll } from "./testScroll";
 
 
 let houseNow = "";
@@ -60,11 +61,20 @@ export function displayResult(house){
     section.append(title);
 
     displayFilm(1,people, houseNow);
+    //displayFilm(2,people, houseNow);
+    //displayFilm(3,people, houseNow);
+    //displayFilm(4,people, houseNow);
+    //displayFilm(5,people, houseNow);
+    //displayFilm(6,people, houseNow);
+    //displayFilm(7,people, houseNow);
+    //displayFilm(8,people, houseNow);
 
 
     displayHover(people, houseNow);
 
     displayParchement(houseData);
+
+    testScroll(people, houseNow);
 
     displayAverage();
 

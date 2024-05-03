@@ -76,3 +76,14 @@
 .characterName{
   font-size: 1.5rem;
 }
+
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Assurez-vous que l'élément est au-dessus des autres contenus */
+}
+
+.step {
+ min-height: 250px;
+}
