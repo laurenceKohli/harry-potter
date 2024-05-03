@@ -130,7 +130,7 @@ function creeBarCharVer(donnees){
         .data(donnees)
         .join(enter => enter
             .append("rect")
-            .attr("x", (d, i) => i * 30 + 55)
+            .attr("x", (d, i) => i * 30 + 60)
             .attr("y", d => yScale(d.ScreenTime))
             .attr("width", 30)
             .attr("height", (d, i) => height - yScale(d.ScreenTime))
@@ -143,11 +143,11 @@ function creeBarCharVer(donnees){
             .tickFormat(x => `${tempsEnMinutes(x)}`);
     
         const axisGroup = monSvg.append('g')
-            .attr('transform', `translate(42, 0)`) // Décalage vers la droite
+            .attr('transform', `translate(48, 0)`) // Décalage vers la droite
             .call(axis);
     
         // Déplacer les étiquettes vers la droite
         axisGroup.selectAll('text')
-            .attr('x', -40) // Ajuster la position horizontale
+            .attr('x', -43) // Ajuster la position horizontale
     
 }
