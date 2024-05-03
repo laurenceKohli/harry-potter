@@ -5,20 +5,25 @@ import { tempsEnMilliseconds } from "./utils";
 import { titleFilm } from "./displayAllInfos";
 
 let people = "";
+let num = "";
+let house = "";
 
 const section = document.querySelector("#house");
 
-export function displayFilm(num, peopleNow) {
+export function displayFilm(numNow, peopleNow, houseNow) {
   people = peopleNow;
+  num = numNow;
+  house = houseNow;
 
   const div = document.createElement("div");
   div.classList.add("film");
 
   const film = titleFilm(num);
-  const filmTitle = document.createElement("h2");
+  const filmTitle = document.createElement("h3");
   filmTitle.textContent = `${film[0]} (${film[2]})`;
   const descr = document.createElement("p");
   descr.textContent = film[1];
+  descr.classList.add("filmDesc");
 
   const screenTime = document.createElement("div");
   screenTime.classList.add("graphique");
@@ -62,22 +67,27 @@ function creeBarCharHor(donnees) {
   const monSvg = select(".graphique")
     .append("svg")
     .attr("width", width)
-    .attr("height", 100);
+    .attr("height", 140);
 
   if (!donnees || donnees.length === 0) {
     // Ajout d'un texte de remplacement si les données sont manquantes
     monSvg
       .append("text")
       .attr("x", 5)
-      .attr("y", (d, i) => i * 40 + 10)
+      .attr("y", 60)
       .attr("class", "missing-data")
       .text("There is no data to this film");
     return; // Arrête l'exécution de la fonction si les données sont manquantes
   }
 
+  let maxScale = width - 800;
+  if(width > 1000){
+    maxScale = 680 
+  }
+
   const xScale = scaleLinear()
     .domain([0, tempsEnMilliseconds(donnees[0].ScreenTime)])
-    .range([0, width - 300]);
+    .range([0, maxScale]);
 
   const barChart = monSvg
     .selectAll("rect")
@@ -85,10 +95,11 @@ function creeBarCharHor(donnees) {
     .join((enter) =>
       enter
         .append("rect")
-        .attr("x", 160)
-        .attr("y", (d, i) => i * 40)
+        .attr("x", 270)
+        .attr("y", (d, i) => i * 50)
         .attr("width", (d, i) => xScale(tempsEnMilliseconds(d.ScreenTime)))
-        .attr("height", 10)
+        .attr("height", 20)
+        .attr("fill", `var(--${house}-secondary-color)`)
     );
   // Crée des étiquettes de texte pour les noms des villes
   const labels = monSvg
@@ -96,8 +107,9 @@ function creeBarCharHor(donnees) {
     .data(donnees)
     .enter()
     .append("text")
+    .attr("class", "characterName")
     .attr("x", 5)
-    .attr("y", (d, i) => i * 40 + 10)
+    .attr("y", (d, i) => i * 50 + 15)
     .text((d) => d.Character);
 
   const labelsCount = monSvg
@@ -107,8 +119,8 @@ function creeBarCharHor(donnees) {
       enter
         .append("text")
         .attr("class", "count")
-        .attr("x", (d, i) => 200 + xScale(tempsEnMilliseconds(d.ScreenTime)))
-        .attr("y", (d, i) => i * 40 + 10)
+        .attr("x", (d, i) => 230 + xScale(tempsEnMilliseconds(d.ScreenTime)))
+        .attr("y", (d, i) => i * 50 + 15)
         .text((d) => d.ScreenTime)
         .attr("text-anchor", "middle")
     );

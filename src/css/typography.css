@@ -29,6 +29,12 @@ h6 {
   font-size: 1.5rem;
 }
 
-p, ol, li, a, text{
+p, ol, li, a{
   font-family: "Caudex", sans-serif;
+}
+
+text {
+  font-family: "Caudex", sans-serif;
+  font-size: 14px;
+  fill: var(--text-color);
 }

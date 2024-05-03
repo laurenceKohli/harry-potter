@@ -59,7 +59,7 @@ export function displayResult(house){
 
     section.append(title);
 
-    displayFilm(1,people);
+    displayFilm(1,people, houseNow);
 
 
     displayHover(people, houseNow);

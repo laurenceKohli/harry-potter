@@ -69,3 +69,10 @@
 #third {
   left: 70%;
 }
+.filmDesc{
+  font-size: 2rem;
+}
+
+.characterName{
+  font-size: 1.5rem;
+}
