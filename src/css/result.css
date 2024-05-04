@@ -30,15 +30,6 @@
   margin-bottom: 0px;
 }
 
-.film{
-  min-height: 100vh;
-}
-
-.sticky{
-  position: sticky;
-  top : 0;
-}
-
 #mainCharacters{
   position: relative;
 }
@@ -69,6 +60,20 @@
 #third {
   left: 70%;
 }
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Assurez-vous que l'élément est au-dessus des autres contenus */
+}
+
+#outer-parchement{
+  background-image: url(../../assets/img/paper-parchment.png);
+  height: 1200px;
+  background-repeat: no-repeat;
+}
+
+/*Tout ce qui concerne les films*/
 .filmDesc{
   font-size: 2rem;
 }
@@ -77,13 +82,75 @@
   font-size: 1.5rem;
 }
 
-
-.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Assurez-vous que l'élément est au-dessus des autres contenus */
+/*SCROLLAMA*/
+#film{
+  min-height: 100vh;
+  position: relative;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			background-color: #f3f3f3;
+			padding: 1rem;
 }
 
+#film>* {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+article {
+  position: relative;
+  padding: 0 1rem;
+  max-width: 20rem;
+}
+
+figure {
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 70px;
+  width: 100%;
+  margin: 0;
+  height: 500px;
+  /* -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); */
+  background-color: #8a8a8a;
+  z-index: 0;
+}
+
+/* figure p {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fff;
+} */
+
 .step {
- min-height: 250px;
+  margin: 0 auto 2rem auto;
+  background-color: #3b3b3b;
+  color: #fff;
+  height: 1000px;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step.is-active {
+  background-color: goldenrod;
+  color: #3b3b3b;
+}
+
+.step p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
 }

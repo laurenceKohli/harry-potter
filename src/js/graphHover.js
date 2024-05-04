@@ -6,21 +6,19 @@ import { axisRight } from "d3-axis";
 import { titleFilm } from "./displayAllInfos";
 import { tempsEnMilliseconds, tempsEnMinutes } from "./utils";
 
-const section = document.querySelector("#house");
+const totalScreen = document.querySelector("#totalScreen");
 let peopleNow = "";
 let houseNow = "";
 
 export function displayHover(people, house) {
     peopleNow = people;
     houseNow = house;
-  const totalScreen = document.createElement("div");
+
+    totalScreen.innerHTML="";
   const titleTotal = document.createElement("h1");
   titleTotal.textContent = "Graph of the 20th more Screentimed characters";
-  totalScreen.classList.add("totalScreen");
 
   totalScreen.append(titleTotal);
-
-  section.append(totalScreen);
 
   graphOver();
 }
@@ -29,7 +27,7 @@ function graphOver() {
     const averageFilms = averagePerPerson();
     creeBarCharVer(averageFilms);
  
-    const CardScreen = document.querySelector(".totalScreen"); // TODO Changer l'id en focntion de l'élément
+    const CardScreen = document.querySelector("#totalScreen"); // TODO Changer l'id en focntion de l'élément
     CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
 }
@@ -142,7 +140,6 @@ function timesOfFilm(filmTitle) {
             }
         }
     });
-    console.log(timeRows);
  
     return timeRows.sort((a, b) => tempsEnMilliseconds(b.ScreenTime) - tempsEnMilliseconds(a.ScreenTime));
 }
@@ -166,7 +163,6 @@ function averagePerPerson(){
                     "Character": personne.Character, 
                     "ScreenTime": tempsEnMilliseconds(personne.ScreenTime)
                 }
-                console.log(personne.Character)
                 tempsTotal.push(send)
             }
         })
@@ -178,7 +174,7 @@ function creeBarCharVer(donnees){
     //svg
     const height = 600;
  
-    const monSvg = select(".totalScreen")
+    const monSvg = select("#totalScreen")
         .append('svg')
         .attr("width", "100%")
         .attr("height", 650);

@@ -2,10 +2,11 @@ import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
 import { displayResult } from "./displayAllInfos";
 
-const section = document.querySelector("#house");
+const average = document.querySelector("#otherHouses");
 
 export function displayAverage() {
-    const average = document.createElement("div");
+    // const average = document.createElement("div");
+    average.innerHTML = "";
     const averageTitle = document.createElement("h1");
     averageTitle.textContent = "Average screentime per House";
     averageTitle.classList.add("averageScreen");
@@ -15,7 +16,7 @@ export function displayAverage() {
 
     average.append(averageTitle, averageInfo);
 
-    section.append(average);
+    //section.append(average);
 
     graphAverageScreen();
 }

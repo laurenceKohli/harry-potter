@@ -8,16 +8,16 @@ let people = "";
 let num = "";
 let house = "";
 
-const section = document.querySelector("#house");
+const div = document.querySelector("#film");
 
 export function displayFilm(numNow, peopleNow, houseNow) {
   people = peopleNow;
   num = numNow;
   house = houseNow;
 
-  const div = document.createElement("div");
-  div.classList.add("film");
-
+  const fixFigure = document.querySelector("figure");
+  fixFigure.innerHTML="";
+  
   const film = titleFilm(num);
   const filmTitle = document.createElement("h3");
   filmTitle.textContent = `${film[0]} (${film[2]})`;
@@ -28,10 +28,8 @@ export function displayFilm(numNow, peopleNow, houseNow) {
   const screenTime = document.createElement("div");
   screenTime.classList.add("graphique");
 
-  div.append(filmTitle, descr, screenTime);
-
-
-  section.append(div);
+  fixFigure.append(filmTitle, descr, screenTime);
+  div.append(fixFigure);
 
   const times = timesOfFilm(film[0]);
   const times3prems = times.slice(0, 3);

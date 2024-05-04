@@ -8,13 +8,14 @@ import { houseBasics, charactersWidth } from "./house";
 import { displayParchement } from "./parchement";
 import { displayHover } from "./graphHover";
 import { vifOrMvt } from "./vifOr";
-import { testScroll } from "./testScroll";
+import { testScroll, initFilmsScroll } from "./testScroll";
 
 
 let houseNow = "";
 let people = "";
 let houseData = "";
 const section = document.querySelector("#house");
+const divFilm = document.querySelector("#film")
 
 function houseChoosen(house) {
   switch (house) {
@@ -48,19 +49,59 @@ let id = 1;
 export function displayResult(house){
     houseChoosen(house);
 
-    section.innerHTML = "";
+    //section.innerHTML = "";
     if(!document.body.classList.contains("intro")){
       document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
     }
 
     houseBasics(houseData);
   
-    const title = document.createElement("h1");
-    title.textContent = `Screentime of the 3 most characters of each film for ${houseNow}`;
+    // const title = document.createElement("h1");
+    // title.textContent = `Screentime of the 3 most characters of each film for ${houseNow}`;
 
-    section.append(title);
+    divFilm.innerHTML = "";
+    const article = document.createElement("article");
 
-    displayFilm(1,people, houseNow);
+    const step1 = document.createElement('div');
+    step1.className = 'step';
+    step1.setAttribute('data-step', '1');
+    const step1Content = document.createElement('p');
+    step1Content.textContent = 'STEP 1';
+    step1.appendChild(step1Content);
+
+    // Create the second step div
+    const step2 = document.createElement('div');
+    step2.className = 'step';
+    step2.setAttribute('data-step', '2');
+    const step2Content = document.createElement('p');
+    step2Content.textContent = 'STEP 2';
+    step2.appendChild(step2Content);
+
+    // Create the third step div
+    const step3 = document.createElement('div');
+    step3.className = 'step';
+    step3.setAttribute('data-step', '3');
+    const step3Content = document.createElement('p');
+    step3Content.textContent = 'STEP 3';
+    step3.appendChild(step3Content);
+
+    // Create the fourth step div
+    const step4 = document.createElement('div');
+    step4.className = 'step';
+    step4.setAttribute('data-step', '4');
+    const step4Content = document.createElement('p');
+    step4Content.textContent = 'STEP 4';
+    step4.appendChild(step4Content);
+
+    article.append(step1, step2, step3, step4);
+    //divFilm.append(title, article);
+
+    const fixFigure = document.createElement("figure");
+    divFilm.append(article, fixFigure);
+
+    //section.append(divFilm);
+
+    //displayFilm(1,people, houseNow);
     //displayFilm(2,people, houseNow);
     //displayFilm(3,people, houseNow);
     //displayFilm(4,people, houseNow);
@@ -74,7 +115,7 @@ export function displayResult(house){
 
     displayParchement(houseData);
 
-    testScroll(people, houseNow);
+    //testScroll(people, houseNow);
 
     displayAverage();
 
@@ -84,6 +125,8 @@ export function displayResult(house){
       vifOrMvt(id);
     }
     id++;
+
+    initFilmsScroll(people, houseNow);
 
 }
 

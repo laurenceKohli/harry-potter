@@ -1,18 +1,17 @@
 const mainSection = document.querySelector("#house");
-
+const basicDiv = document.querySelector("#houseBasics");
 let houseName = "";
 
 export function houseBasics(nameData) {
  houseName = nameData;
-  const div = document.createElement("div");
-  div.classList.add("houseBasics");
 
-  div.append(
+  basicDiv.innerHTML = "";
+  basicDiv.append(
     displayBasics(),
     displayMainCharacters()
   );
   //ajouter au dom
-  mainSection.append(div);
+  //mainSection.append(div);
 }
 
 function displayBasics(){
