@@ -31,89 +31,51 @@ function graphOver() {
     CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
 }
- 
-
-
-// function showCard(e) {
-//     e.stopPropagation();
-//     const card = document.querySelector(".hp-quiz-card");
-//     const hover = document.querySelector(".hp-quiz-card h1");
-//     console.log(e.target)
-//     const currentName = e.target.id;
-    
-
-//     if (!(hover.textContent = ((currentName) == ""))) {
-//         const dataCaracter = filmCaracters.find((e) => e.Name == currentName)
-//         if ( currentName == "totalScreen" ){
-//             //je ne veux afficher que ceux qui ont une carte à leur nom (totalScreen n'est pas dans Harry Potter ;-) )
-//         }else {
-//             card.style.position = "fixed";
-//             card.style.left = "50%";
-//             card.style.top = "50%";
-//             card.style.transform = "translate(-50%, -50%)";
-//             card.style.zIndex = "1000";
-//             card.querySelector('.hp-quiz-card .sidebar').style.backgroundColor = `var(--${houseNow}-primary-card-color)`;
-//             card.querySelector('.hp-quiz-card .menu-item.active ').style.backgroundColor = `var(--${houseNow}-secondary-card-color)`;
-//             card.querySelector('.hp-quiz-card .card').style.backgroundColor = `var(--${houseNow}-background-card-color)`;
-//             card.querySelector('.hp-quiz-card .house ').style.color = `var(--${houseNow}-secondary-card-color)`;
-//             hover.textContent = (currentName == "")? "NaN" : currentName;
-//             // document.querySelector('.content p:nth-child(2)').textContent = dataCaracter.Blood;
-//             // document.querySelector('.content p:nth-child(3)').textContent = dataCaracter.Gender;
-//             // document.querySelector('.content p:nth-child(4)').textContent = dataCaracter.Descr;
-//             // document.querySelector('.house').textContent= houseNow;
-//             //console.log(houseNow);
-//             card.classList.remove("hide");
-
-
-//         }
-//     }
-// }
 
 function showCard(e) {
     e.stopPropagation();
     const card = document.querySelector(".hp-quiz-card");
-    const hover = document.querySelector(".hp-quiz-card h1");
+    const hover = card.querySelector("h1");
     const currentName = e.target.id;
 
-    // Correction ici : utiliser l'opérateur de comparaison pour vérifier si currentName est vide
-    if (currentName === "") {
-        return; // Si currentName est vide, sortir de la fonction
-    }
-
     let dataCaracter ="";
-    if (currentName == "Professor Severus Snape") {
-        dataCaracter = filmCaracters.find((e) => e.Name == "Severus Snape");
-    } else if (currentName == "Professor Filius Flitwick"){
-        dataCaracter = filmCaracters.find((e) => e.Name == "Filius Flitwick");
-    } else if (currentName == "Professor Gilderoy Lockhart"){
-        dataCaracter = filmCaracters.find((e) => e.Name == "Gilderoy Lockhart");
-    } else if(currentName == "Professor Pomona Sprout"){
-        dataCaracter = filmCaracters.find((e) => e.Name == "Pomona Sprout");
+    switch (currentName) {
+        case "":
+            return;
+        case "Professor Severus Snape":
+            dataCaracter = filmCaracters.find((e) => e.Name == "Severus Snape");
+            break;
+        case "Professor Filius Flitwick":
+            dataCaracter = filmCaracters.find((e) => e.Name == "Filius Flitwick");
+            break;
+        case "Professor Gilderoy Lockhart":
+            dataCaracter = filmCaracters.find((e) => e.Name == "Gilderoy Lockhart");
+            break;
+        case "Professor Pomona Sprout":
+            dataCaracter = filmCaracters.find((e) => e.Name == "Pomona Sprout");
+            break;
+        case "totalScreen":
+            return;
+        default:
+            dataCaracter = filmCaracters.find((e) => e.Name == currentName);
+            break;
     }
-    else {
-        dataCaracter = filmCaracters.find((e) => e.Name == currentName);
-    }
-    // Gestion spécifique pour "totalScreen"
-    if (currentName === "totalScreen") {
-        // Ne rien faire pour "totalScreen"
-        return;
-    } else {
         card.style.position = "fixed";
         card.style.left = "50%";
         card.style.top = "50%";
         card.style.transform = "translate(-50%, -50%)";
-        card.style.zIndex = "1000";
-        card.querySelector('.hp-quiz-card .sidebar').style.backgroundColor = `var(--${houseNow}-primary-card-color)`;
-        card.querySelector('.hp-quiz-card .menu-item.active ').style.backgroundColor = `var(--${houseNow}-secondary-card-color)`;
-        card.querySelector('.hp-quiz-card .card').style.backgroundColor = `var(--${houseNow}-background-card-color)`;
-        card.querySelector('.hp-quiz-card .house ').style.color = `var(--${houseNow}-secondary-card-color)`;
+        card.style.zIndex = "-1";
+        card.querySelector('.sidebar').style.backgroundColor = `var(--${houseNow}-primary-card-color)`;
+        card.querySelector('.menu-item.active ').style.backgroundColor = `var(--${houseNow}-secondary-card-color)`;
+        card.querySelector('.card').style.backgroundColor = `var(--${houseNow}-background-card-color)`;
+        card.querySelector('.house ').style.color = `var(--${houseNow}-secondary-card-color)`;
         hover.textContent = currentName;
-        document.querySelector('.content p:nth-child(2)').textContent = dataCaracter.Blood;
-        document.querySelector('.content p:nth-child(3)').textContent = dataCaracter.Gender;
-        document.querySelector('.content p:nth-child(4)').textContent = dataCaracter.Descr;
-        document.querySelector('.house').textContent= houseNow;
-        card.classList.remove("hide");
-    }
+        card.querySelector('.content p:nth-child(2)').textContent = dataCaracter.Blood;
+        card.querySelector('.content p:nth-child(3)').textContent = dataCaracter.Gender;
+        card.querySelector('.content p:nth-child(4)').textContent = dataCaracter.Descr;
+        card.querySelector('.house').textContent= houseNow;
+
+        card.classList.remove("hide");        
 }
 
  

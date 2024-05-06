@@ -24,7 +24,6 @@
 ## graphHover.js
 - CSS page
 - ajouter Dobby
-- enlever carte Total Screen qui s'affiche au coin à droite
 
 ## questions.js
 - gestion comptage point
