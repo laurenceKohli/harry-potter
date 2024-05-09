@@ -40,3 +40,11 @@
     font-size: 2rem;
     margin: 15px;
 }
+
+#question #choixpeau{
+    position: absolute;
+      left: -320px;
+      top: 40px;
+      z-index: 10;
+      height: 30%;
+  }

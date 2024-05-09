@@ -1,4 +1,5 @@
 import { displayResult } from "./displayAllInfos";
+import { choixpeauMvt } from "./choixpeau";
 
 export const questionsUser = {
   1: {
@@ -83,7 +84,14 @@ export function displayQuestion(id){
     }
  
     questionElement.appendChild(answersList);
-    section.append(imageDiv, questionElement);
+
+    const choixpeau = document.createElement("IMG");
+  choixpeau.setAttribute('id', 'choixpeau');
+  choixpeau.src = "../../assets/img/sorting_hat.png";
+
+    section.append(imageDiv, questionElement, choixpeau);
+
+    choixpeauMvt(id);
 }
 
 export function answerChoosen(index, answer){
