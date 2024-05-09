@@ -63,6 +63,7 @@ const scroller = scrollama();
 // scrollama event handlers
 function handleStepEnter(response) {
 			console.log(response);
+			console.log("handleStep");
 			// response = { element, direction, index }
 
 			// add color to current step only
@@ -76,13 +77,14 @@ function handleStepEnter(response) {
 		}
 let people = "";
 let house = "";
-		export function initFilmsScroll(peopleNow, houseNow) {
+
+export function initFilmsScroll(peopleNow, houseNow) {
 
       people = peopleNow;
       house = houseNow;
 			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
 //		handleResize();
-
+	console.log("init");
 			// 2. setup the scroller passing options
 			// 		this will also initialize trigger observations
 			// 3. bind scrollama event handlers (this can be chained like below)

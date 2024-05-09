@@ -47,12 +47,15 @@ function houseChoosen(house) {
 let id = 1;
 
 export function displayResult(house){
+
+  
+  if(!document.body.classList.contains("intro")){
+    document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
+  }
+
     houseChoosen(house);
 
     //section.innerHTML = "";
-    if(!document.body.classList.contains("intro")){
-      document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
-    }
 
     houseBasics(houseData);
   
@@ -127,7 +130,6 @@ export function displayResult(house){
     id++;
 
     initFilmsScroll(people, houseNow);
-
 }
 
 export function titleFilm(num) {

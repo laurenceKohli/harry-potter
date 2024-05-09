@@ -29,7 +29,7 @@ export function displayFilm(numNow, peopleNow, houseNow) {
   screenTime.classList.add("graphique");
 
   fixFigure.append(filmTitle, descr, screenTime);
-  div.append(fixFigure);
+  //div.append(fixFigure);
 
   const times = timesOfFilm(film[0]);
   const times3prems = times.slice(0, 3);

@@ -29,6 +29,7 @@
     padding: 100px 0;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 300px;
 }
 
 #question img{
