@@ -17,6 +17,9 @@ export function displayFilm(numNow, peopleNow, houseNow) {
 
   const fixFigure = document.querySelector("figure");
   fixFigure.innerHTML="";
+
+  const title = document.createElement("h1");
+  title.textContent = `Screentime of the 3 most characters of each film for ${houseNow}`;
   
   const film = titleFilm(num);
   const filmTitle = document.createElement("h3");
@@ -28,7 +31,7 @@ export function displayFilm(numNow, peopleNow, houseNow) {
   const screenTime = document.createElement("div");
   screenTime.classList.add("graphique");
 
-  fixFigure.append(filmTitle, descr, screenTime);
+  fixFigure.append(title, filmTitle, descr, screenTime);
   //div.append(fixFigure);
 
   const times = timesOfFilm(film[0]);

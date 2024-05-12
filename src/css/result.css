@@ -111,27 +111,13 @@ figure {
   top: 70px;
   width: 100%;
   margin: 0;
-  height: 500px;
+  height: 600px;
   /* -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); */
   background-color: #8a8a8a;
   z-index: 0;
 }
-
-/* figure p {
-  text-align: center;
-  padding: 1rem;
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  font-size: 8rem;
-  font-weight: 900;
-  color: #fff;
-} */
 
 .step {
   margin: 0 auto 2rem auto;
