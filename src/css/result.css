@@ -36,8 +36,8 @@
 
 #vifor{
   position: absolute;
-    left: -550px;
-    top: 42em; /*780px*/
+    left: -650px;
+    top: 55em; /*780px*/
     z-index: 10;
 }
 
@@ -139,4 +139,16 @@ figure {
   text-align: center;
   padding: 1rem;
   font-size: 1.5rem;
+}
+
+#totalScreen{
+  position : relative;
+}
+
+#dobby{
+  position: absolute;
+    left: -210px;
+    top : 1040px;
+    z-index: 10;
+  height: 70%;
 }

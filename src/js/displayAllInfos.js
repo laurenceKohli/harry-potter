@@ -6,7 +6,7 @@ import { displayAverage } from "./swapHouse";
 import { houseBasics, charactersWidth } from "./house";
 import { displayParchement } from "./parchement";
 import { displayHover } from "./graphHover";
-import { vifOrMvt } from "./vifOr";
+import { vifOrMvt, dobbyMvt } from "./animations-result";
 import { initFilmsScroll } from "./testScroll";
 
 
@@ -137,6 +137,8 @@ export function displayResult(house) {
   
   //créer le graphique avec les 20 personnes les plus vues
   displayHover(people, houseNow);
+  //afficher Dooby après 30 secondes sur le graphique
+  dobbyMvt();
 
   //Créer le parchemin
   displayParchement(houseData);
@@ -148,7 +150,7 @@ export function displayResult(house) {
   charactersWidth();
 
   if (id == 2) {
-    vifOrMvt(id);
+    vifOrMvt();
   }
   id++;
 

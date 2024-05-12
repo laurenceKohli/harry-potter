@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Importer le plugin Scroll
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function vifOrMvt(id) {
+export function vifOrMvt() {
 	gsap.to("#vifor", {
 		ease: "power1.in", // Fonction d'easing pour un mouvement doux
 		//duration: 1, // Durée de l'animation
@@ -28,4 +28,40 @@ export function vifOrMvt(id) {
 			},
 		}
 	});
+}
+
+export function dobbyMvt(){
+	const sectionToAppear = document.querySelector("#dobby");
+
+	const options = {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.5 // Trigger quand 50% de la section est visible
+	  };
+	  
+	// Créez un Intersection Observer pour observer la section "graphe"
+	const observer = new IntersectionObserver((entries, observer) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+		// La section "graphe" est visible, commencez à observer
+		observer.disconnect(); // Arrêtez d'observer une fois détecté
+	
+		// Délai de 2 minutes après l'intersection
+		setTimeout(() => {
+			// Animation pour faire apparaître la section
+			gsap.to(sectionToAppear, {
+			duration: 1,
+			y : -786,
+			ease: "power2.out" // Ajustez l'ease selon vos préférences
+			});
+		}, 3000); // 120000 millisecondes = 2 minutes
+		}
+	});
+	}, options);
+	
+	// Sélectionnez la section "graphe" que vous souhaitez observer
+	const graphSection = document.querySelector("#totalScreen");
+	
+	// Commencez à observer la section "graphe"
+	observer.observe(graphSection);
 }

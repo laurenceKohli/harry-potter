@@ -16,20 +16,30 @@ export function displayHover(people, house) {
 
     totalScreen.innerHTML="";
   const titleTotal = document.createElement("h1");
-  titleTotal.textContent = "Graph of the 20th more Screentimed characters";
 
-  totalScreen.append(titleTotal);
+  const dobby = document.createElement("IMG");
+  dobby.setAttribute('id', 'dobby');
+  dobby.src = "../../assets/img/dobby.png";
 
-  graphOver();
+  totalScreen.append(titleTotal, dobby);
+
+  const taille = graphOver();
+
+  titleTotal.textContent = `Graph of the ${taille <21 ? taille : 20}th more Screentimed characters`;
+
 }
 
 function graphOver() {
     const averageFilms = averagePerPerson();
     creeBarCharVer(averageFilms);
+
+    console.log("taille", averageFilms.length);
  
     const CardScreen = document.querySelector("#totalScreen"); // TODO Changer l'id en focntion de l'élément
     CardScreen.addEventListener("mouseover", (e) => showCard(e));
     CardScreen.addEventListener("mouseout", hideCard);
+
+    return averageFilms.length;
 }
 
 function showCard(e) {
@@ -55,6 +65,7 @@ function showCard(e) {
             dataCaracter = filmCaracters.find((e) => e.Name == "Pomona Sprout");
             break;
         case "totalScreen":
+        case "dobby" :
             return;
         default:
             dataCaracter = filmCaracters.find((e) => e.Name == currentName);
