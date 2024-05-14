@@ -40,3 +40,8 @@
 - CSS page
 
 ## Autres
+
+---
+### Steve à faire:
+- Redownload et reupload les images (moins lourdes)
+- Remettre en page "parchement"
