@@ -89,7 +89,7 @@
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
-			background-color: #f3f3f3;
+			/* background-color: #f3f3f3; */
 			padding: 1rem;
 }
 
@@ -101,44 +101,37 @@
 
 article {
   position: relative;
+  left : 200px;
   padding: 0 1rem;
   max-width: 20rem;
 }
 
 figure {
-  /* position: -webkit-sticky; */
   position: sticky;
   top: 70px;
   width: 100%;
   margin: 0;
   height: 600px;
-  /* -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); */
-  background-color: #8a8a8a;
+  /* background-color: #8a8a8a; */
   z-index: 0;
+  translate: -120px 0;
 }
 
 .step {
   margin: 0 auto 2rem auto;
-  background-color: #3b3b3b;
+   /* background-color: #3b3b3b; */
   color: #fff;
-  height: 1000px;
+  height: 700px;
 }
 
 .step:last-child {
   margin-bottom: 0;
 }
 
-.step.is-active {
-  background-color: goldenrod;
-  color: #3b3b3b;
-}
-
 .step p {
   text-align: center;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 0;
 }
 
 #totalScreen{

@@ -12,28 +12,21 @@
 
 # ToDo
 ## index.js
-- faire afficher uniquement le début de la page questions
 
 ## film.js
 - CSS page
-- scroll partie ScreenTime per film
 
 - affichage vif or / pas (ScreenTime per film)
 - affichage vif or (Graph 20 characters)
 
 ## graphHover.js
 - CSS page
-- ajouter Dobby
 
 ## questions.js
 - gestion comptage point
 - gestion clic sur réponses et enregistrement points
 
-- ?? scroll vertical entre questions
-- ?? passage rapide du choixpeau ??
-
 ## house.js
-- fonction pour expliquer pourquoi on est dans cette maison
 - CSS page
 
 ## stat final
