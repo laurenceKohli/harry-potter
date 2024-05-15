@@ -10,16 +10,6 @@ h1.parchment-title {
     margin-top: 6%;
 }
 
-div.outer-parchement {
-    margin-top: 200px;
-    margin-bottom: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: scale(0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 div.inner-parchement {
     background-repeat: no-repeat;
@@ -27,4 +17,13 @@ div.inner-parchement {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 200px;
 }
+
+#outer-parchement {
+    background-repeat: no-repeat;
+    background-position:  center;
+    margin-top: 500px;
+}
+
+

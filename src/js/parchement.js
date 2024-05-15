@@ -2,11 +2,6 @@
 const outerDiv = document.querySelector("#outer-parchement");
 
 export function displayParchement(houseObj) {
-    // const outerDiv = document.createElement('div');
-    // outerDiv.className = 'outer-parchement';
-    // outerDiv.style.backgroundImage = `url(../../assets/img/paper-parchment.png)`;
-    // outerDiv.style.height = '1200px';
-    // section.append(outerDiv);
     outerDiv.innerHTML = "";
     const innerDiv = document.createElement('div');
     innerDiv.className = 'inner-parchement';
