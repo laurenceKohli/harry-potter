@@ -55,10 +55,10 @@ export const questionsUser = {
   6: {
     question: "What kind of books attract you the most?",
     reponse: {
-        "Science and knowledge books (R)": "R",
-        "Epic adventures (G)": "G",
-        "Books on mysteries (S)": "S",
-        "Tales and family stories (H)": "H",
+        "Science and knowledge books": "R",
+        "Epic adventures": "G",
+        "Books on mysteries": "S",
+        "Tales and family stories": "H",
     },
   },
 };

@@ -36,7 +36,6 @@ export function displayFilm(numNow, peopleNow, houseNow) {
 
   const times = timesOfFilm(film[0]);
   const times3prems = times.slice(0, 3);
-  console.log(times3prems);
 
   creeBarCharHor(times3prems);
 }
@@ -44,7 +43,6 @@ export function displayFilm(numNow, peopleNow, houseNow) {
 function timesOfFilm(filmTitle) {
   let filmRows = filmTime.filter((e) => e.Movie === filmTitle);
   let timeRows = [];
-  console.log(people);
   people.forEach((personne) => {
     const line = filmRows.filter((e) => e.Character.match(personne.Name));
     if (line.length > 0) {

@@ -9,8 +9,8 @@ displayResult("gryffindor");
 
 displayQuestion(1);
 
-// window.addEventListener('scroll', handleScroll);
-// window.scrollTo(0, 0);
+ window.addEventListener('scroll', handleScroll);
+ window.scrollTo(0, 0);
 
 
 let index = 2;
@@ -22,7 +22,7 @@ document.querySelector("#question").addEventListener("click", (e) => {
   } else if(index == 7) {
     console.log(e.target.closest("li").textContent)
     answerChoosen(index-1, e.target.closest("li").textContent )
-    //window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('scroll', handleScroll);
     document.body.style.overflow = '';
   }
  

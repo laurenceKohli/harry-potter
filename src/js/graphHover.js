@@ -33,7 +33,6 @@ function graphOver() {
     const averageFilms = averagePerPerson();
     creeBarCharVer(averageFilms);
 
-    console.log("taille", averageFilms.length);
  
     const CardScreen = document.querySelector("#totalScreen"); // TODO Changer l'id en focntion de l'élément
     CardScreen.addEventListener("mouseover", (e) => showCard(e));

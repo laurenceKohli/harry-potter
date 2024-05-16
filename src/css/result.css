@@ -22,16 +22,18 @@
 .basics p {
   font-size: 2rem;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 4px;
   margin-left: 20px;
 }
 
 .basics h2 {
   margin-bottom: 0px;
+  margin-top: 140px;
 }
 
 #mainCharacters{
   position: relative;
+  margin-top: 450px;
 }
 
 #vifor{
@@ -84,6 +86,7 @@
 
 /*SCROLLAMA*/
 #film{
+  margin-top: 400px;
   min-height: 100vh;
   position: relative;
 			display: -webkit-box;
@@ -136,6 +139,7 @@ figure {
 
 #totalScreen{
   position : relative;
+  margin-top: 400px;
 }
 
 #dobby{
@@ -144,4 +148,8 @@ figure {
     top : 1040px;
     z-index: 10;
   height: 70%;
+}
+
+#otherHouses{
+  margin-top: 250px;
 }
