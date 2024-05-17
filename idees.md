@@ -11,30 +11,17 @@
 - ? ajouter relations entre personnages
 
 # ToDo
-## index.js
-
-## film.js
-- CSS page
-
-- affichage vif or / pas (ScreenTime per film)
-- affichage vif or (Graph 20 characters)
-
-## graphHover.js
-- CSS page
-
 ## questions.js
 - gestion comptage point
 - gestion clic sur réponses et enregistrement points
 
-## house.js
-- CSS page
-
-## stat final
-- CSS page
-
 ## Autres
+- sources images à ajouter
+- sources données à préciser en bas de page
+- Déplacer Dobby sur la gauche
+- Mettre le nom des maisons sur le barchar final 
+- Bonus: Animer les barchar lors du changement de film
 
 ---
 ### Steve à faire:
-- Redownload et reupload les images (moins lourdes)
-- Remettre en page "parchement"
+- 
