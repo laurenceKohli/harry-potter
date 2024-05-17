@@ -137,7 +137,6 @@ function displayMainCharacters(){
 window.addEventListener('scroll', function() {
   if(document.querySelector('#third').getBoundingClientRect().top < 65){
     document.querySelector('#mainCharactersTitle').classList.remove("sticky")
-    console.log("pas sticky");
   } else {
     document.querySelector('#mainCharactersTitle').classList.add("sticky");
   }
@@ -163,32 +162,3 @@ boxes.forEach(box => {
     box.style.height = maxHeight + 'px';
 });
 }
-
-// window.addEventListener('scroll', function() {
-//   const section = document.querySelector('#mainCharacters');
-//   const sectionTop = section.getBoundingClientRect().top;
-
-//   if(sectionTop < 0 && sectionTop > -1){
-//     document.querySelector(".characters").classList.add('inScroll');
-//     section.classList.add('fixed');
-//     document.querySelector('#mainCharacters > h2').classList.add('fixed');
-//     document.querySelector('#first').classList.add('fixed');
-//      //console.log(document.querySelector("#second").scrollTop )
-//      let topTo = 1002;
-//      let top2To = 1002;
-//      document.querySelector(".characters").addEventListener('scroll', function(e){
-//       topTo -= 10;
-//       if(topTo > 0){
-//         document.querySelector("#second").style.top = topTo+"px";
-//       } else {
-//         document.querySelector('#second').classList.add('fixed');
-//         top2To -= 10;
-//         if(top2To > 0){
-//           document.querySelector("#third").style.top = top2To+"px";
-//         } else {
-//           document.querySelector('#third').classList.add('fixed');
-//         }
-//       }    
-//      })
-//   }
-// });

@@ -51,7 +51,7 @@ function timesOfFilm(filmTitle) {
       }
     }
   });
-  console.log(timeRows);
+  //console.log(timeRows);
 
   return timeRows.sort(
     (a, b) =>

@@ -20,7 +20,7 @@ document.querySelector("#question").addEventListener("click", (e) => {
     displayQuestion(index);
     index++;
   } else if(index == 7) {
-    console.log(e.target.closest("li").textContent)
+    //console.log(e.target.closest("li").textContent)
     answerChoosen(index-1, e.target.closest("li").textContent )
     window.removeEventListener('scroll', handleScroll);
     document.body.style.overflow = '';
@@ -36,7 +36,7 @@ function handleScroll() {
   if (window.scrollY > sectionLimite.offsetTop && !limiteAtteinte) {
       // Désactiver le défilement de la page
       document.body.style.overflow = 'hidden';
-      console.log("stop")
+      //console.log("stop")
       limiteAtteinte = true;
   }
 }

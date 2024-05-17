@@ -166,7 +166,6 @@ function creeBarCharVer(donnees){
             .attr("height", (d, i) => height - yScale(d.ScreenTime))
             .attr("id", d => d.Character)
             .attr("fill", (d, i) => (i%2 == 0) ? `var(--${houseNow}-secondary-card-color)` : `var(--${houseNow}-secondary-color)`));
-            // TODO a remplacer par ${houseNow} à la place du nom de la maison
  
 
             const axis = axisRight(yScale)

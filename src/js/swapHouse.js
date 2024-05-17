@@ -26,7 +26,6 @@ function graphAverageScreen() {
     //svg
     const donnees = [31, 29, 23, 17];
 
-    console.log(donnees);
     const monSvg = select(".averageScreen")
         .append("svg")
         .attr("width", "90%")
