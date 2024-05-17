@@ -17,10 +17,12 @@ let index = 2;
 document.querySelector("#question").addEventListener("click", (e) => {
   if (index==2) document.querySelector("#quiz").classList.remove("active")
   if (index<7) {
+    console.log(e.target.closest("li").textContent)
+    answerChoosen(index-1, e.target.closest("li").textContent )
     displayQuestion(index);
     index++;
   } else if(index == 7) {
-    //console.log(e.target.closest("li").textContent)
+    console.log(e.target.closest("li").textContent)
     answerChoosen(index-1, e.target.closest("li").textContent )
     window.removeEventListener('scroll', handleScroll);
     document.body.style.overflow = '';

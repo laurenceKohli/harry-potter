@@ -16,8 +16,6 @@ export function displayAverage() {
 
     average.append(averageTitle, averageInfo);
 
-    //section.append(average);
-
     graphAverageScreen();
 }
 
@@ -39,7 +37,7 @@ function graphAverageScreen() {
         .join((enter) =>
             enter
                 .append("rect")
-                .attr("x", (d, i) => i * 200)
+                .attr("x", (d, i) => i * 200 + 20)
                 .attr("y", (d) => 500 - yScale(d))
                 .attr("width", 100)
                 .attr("height", (d, i) => yScale(d))
@@ -54,9 +52,23 @@ function graphAverageScreen() {
         .data(donnees)
         .enter()
         .append("text")
-        .attr("x", (d, i) => i * 200 + 30)
+        .attr("x", (d, i) => i * 200 + 50)
         .attr("y", (d, i) => 530 - yScale(d))
         .text((d) => `${d}%`);
+
+    const houses = ["Gryffinfor", "Slytherin", "Ravenclaw", "Hufflepuff"];
+    monSvg
+    .selectAll(".title")
+    .data(houses)
+    .join((enter) =>
+        enter
+        .append("text")
+        .attr("class", "title")
+        .attr("x", (d, i) => i * 200 + 5)
+        .attr("y", (470))
+        .text((d) => d)
+        .attr("transform", (d, i) => `rotate(-90, ${(i)* 200 + 40}, 450)`)
+    );
 
     clicAverageScreen();
 }

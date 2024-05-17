@@ -1,22 +1,22 @@
 .fondhouse {
   background-size: cover;
-  background-repeat:repeat-y;
+  background-repeat: repeat-y;
 }
 
-#basics h1{
+#basics h1 {
   margin-left: 100px;
   font-size: 6rem;
 }
 
-#icon{
-    position: absolute;
-    left : 200px;
-    height: 300px;
+#icon {
+  position: absolute;
+  left: 200px;
+  height: 300px;
 }
 
-#bigIcon{
-    position: absolute;
-    right: 0px;
+#bigIcon {
+  position: absolute;
+  right: 0px;
 }
 
 .basics p {
@@ -31,30 +31,30 @@
   margin-top: 140px;
 }
 
-#mainCharacters{
+#mainCharacters {
   position: relative;
   margin-top: 450px;
 }
 
-#vifor{
+#vifor {
   position: absolute;
-    left: -650px;
-    top: 55em; /*780px*/
-    z-index: 10;
+  left: -650px;
+  top: 55em;
+  z-index: 10;
 }
 
 .mainCharacter {
-    position: sticky;
-    top: 90px; 
-    width: 31%;
-    min-height: 80vh;
-   }
+  position: sticky;
+  top: 90px;
+  width: 31%;
+  min-height: 80vh;
+}
 
 .mainCharacter img {
-    max-width: 100%;
+  max-width: 100%;
   height: auto;
-  }
-   
+}
+
 #second {
   left: 40%;
 }
@@ -66,34 +66,35 @@
 .sticky {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Assurez-vous que l'élément est au-dessus des autres contenus */
+  z-index: 1000;
+  /* Assurez-vous que l'élément est au-dessus des autres contenus */
 }
 
-#outer-parchement{
+#outer-parchement {
   background-image: url(../../assets/img/paper-parchment.png);
   height: 1200px;
   background-repeat: no-repeat;
 }
 
 /*Tout ce qui concerne les films*/
-.filmDesc{
+.filmDesc {
   font-size: 2rem;
 }
 
-.characterName{
+.characterName {
   font-size: 1.5rem;
 }
 
 /*SCROLLAMA*/
-#film{
+#film {
   margin-top: 400px;
   min-height: 100vh;
   position: relative;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			/* background-color: #f3f3f3; */
-			padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* background-color: #f3f3f3; */
+  padding: 1rem;
 }
 
 #film>* {
@@ -104,7 +105,7 @@
 
 article {
   position: relative;
-  left : 200px;
+  left: 200px;
   padding: 0 1rem;
   max-width: 20rem;
 }
@@ -122,7 +123,7 @@ figure {
 
 .step {
   margin: 0 auto 2rem auto;
-   /* background-color: #3b3b3b; */
+  /* background-color: #3b3b3b; */
   color: #fff;
   height: 700px;
 }
@@ -137,19 +138,45 @@ figure {
   font-size: 0;
 }
 
-#totalScreen{
-  position : relative;
+/*Partie Screen Time most timed*/
+#totalScreen {
+  position: relative;
   margin-top: 400px;
 }
 
-#dobby{
+#dobby {
   position: absolute;
-    left: -210px;
-    top : 1040px;
-    z-index: 10;
+  left: -255px;
+  top: 1040px;
+  z-index: 10;
   height: 70%;
 }
 
-#otherHouses{
+/*Autres maisons*/
+#otherHouses {
   margin-top: 250px;
+}
+
+.title{
+  font-size: 2rem;
+}
+
+#footer{
+  flex-direction: row;
+  background-color: #00000050;
+  margin: 0;
+  padding: 38px;
+  width: 100vw;
+  max-width: none;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 10vw;
+}
+
+#footer h5{
+  margin: 0 25px;
+}
+
+#footer li {
+  margin-bottom: 5px;
 }

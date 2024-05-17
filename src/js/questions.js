@@ -1,5 +1,6 @@
 import { displayResult } from "./displayAllInfos";
 import { choixpeauMvt } from "./choixpeau";
+import { max } from "d3-array";
 
 export const questionsUser = {
   1: {
@@ -94,33 +95,58 @@ export function displayQuestion(id){
     choixpeauMvt(id);
 }
 
+let gryf = 0;
+let rave = 0;
+let huff = 0;
+let slyt = 0;
+
 export function answerChoosen(index, answer){
-  console.log(questionsUser[index].reponse[answer]);
-  const initalChoosen = questionsUser[index].reponse[answer]; 
+  const initalChoosen = questionsUser[index].reponse[answer];
+  console.log(initalChoosen);
+  getHouse(initalChoosen);
   if(index == 6)  finalAnswer(initalChoosen)
 }
 
-function finalAnswer(initalChoosen){
+function finalAnswer(initial){
   document.querySelector("#house").classList.add("active")
   document.querySelector("#question").classList.remove("active")
   document.querySelector("body").classList.remove("intro")
   document.querySelector("body").classList.add("fondhouse")
-  displayResult(getfinalHouse(initalChoosen));
+  displayResult(getfinalHouse(max([gryf, rave, huff, slyt]), initial));
 }
 
-function getfinalHouse(initial){
+function getHouse(initial){
+    switch (initial) {
+      case "G" :
+        gryf++;
+        break;
+      case "R" :
+        rave++;
+        break;
+      case "H":
+        huff++;
+        break;
+      case "S":
+        slyt++;
+        break;
+      default:
+        break;
+    }
+  }
+
+function getfinalHouse(max){
   let house = "";
-  switch (initial) {
-    case "G" :
+  switch (max) {
+    case gryf :
       house = "gryffindor";
       break;
-    case "R" :
+    case rave :
       house = "ravenclaw";
       break;
-    case "H":
+    case huff:
       house = "hufflepuff";
       break;
-    case "S":
+    case slyt:
      house = "slytherin";
       break;
 

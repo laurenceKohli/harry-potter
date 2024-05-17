@@ -11,17 +11,12 @@
 - ? ajouter relations entre personnages
 
 # ToDo
-## questions.js
-- gestion comptage point
-- gestion clic sur réponses et enregistrement points
-
-## Autres
-- sources images à ajouter
-- sources données à préciser en bas de page
-- Déplacer Dobby sur la gauche
-- Mettre le nom des maisons sur le barchar final 
-- Bonus: Animer les barchar lors du changement de film
+## Retours finaux
+OK - sources données à préciser en bas de page
+OK - Déplacer Dobby sur la gauche
+OK - Mettre le nom des maisons sur le barchar final 
+Steve - Bonus: Animer les barchar lors du changement de film
 
 ---
 ### Steve à faire:
-- 
+- Bonus: Animer les barchar lors du changement de film
