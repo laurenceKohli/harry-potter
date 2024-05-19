@@ -1,6 +1,7 @@
 import filmTime from "../../data/Screen_Time_dos.csv";
 import { select } from "d3-selection";
 import { scaleLinear } from "d3-scale";
+import { transition } from "d3-transition";
 import { tempsEnMilliseconds } from "./utils";
 import { titleFilm } from "./displayAllInfos";
 
@@ -64,18 +65,18 @@ function creeBarCharHor(donnees) {
   const width = window.innerWidth;
 
   const monSvg = select(".graphique")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", 140);
+  .append("svg")
+  .attr("width", width)
+  .attr("height", 140);
 
   if (!donnees || donnees.length === 0) {
     // Ajout d'un texte de remplacement si les données sont manquantes
     monSvg
-      .append("text")
-      .attr("x", 5)
-      .attr("y", 60)
-      .attr("class", "missing-data")
-      .text("There is no data to this film");
+    .append("text")
+    .attr("x", 5)
+    .attr("y", 60)
+    .attr("class", "missing-data")
+    .text("There is no data to this film");
     return; // Arrête l'exécution de la fonction si les données sont manquantes
   }
 
@@ -85,42 +86,51 @@ function creeBarCharHor(donnees) {
   }
 
   const xScale = scaleLinear()
-    .domain([0, tempsEnMilliseconds(donnees[0].ScreenTime)])
-    .range([0, maxScale]);
+  .domain([0, tempsEnMilliseconds(donnees[0].ScreenTime)])
+  .range([0, maxScale]);
 
   const barChart = monSvg
-    .selectAll("rect")
-    .data(donnees)
-    .join((enter) =>
+  .selectAll("rect")
+  .data(donnees)
+  .join((enter) =>
       enter
-        .append("rect")
-        .attr("x", 270)
-        .attr("y", (d, i) => i * 50)
-        .attr("width", (d, i) => xScale(tempsEnMilliseconds(d.ScreenTime)))
-        .attr("height", 20)
-        .attr("fill", `var(--${house}-secondary-color)`)
+      .append("rect")
+      .attr("x", 270)
+      .attr("y", (d, i) => i * 50)
+      .attr("width", 0) // Initialisez la largeur à 0
+      .attr("height", 20) // Définissez la hauteur
+      .attr("fill", `var(--${house}-secondary-color)`)
+      .transition() // Commencez une transition
+      .duration(800) // Durée de l'animation
+      .attr("width", (d, i) => xScale(tempsEnMilliseconds(d.ScreenTime))) // Définissez la largeur finale
+      .delay((d, i) => i * 100) // Ajoutez un délai avant le début de l'animation pour chaque barre
     );
-  // Crée des étiquettes de texte pour les noms des villes
+
+  // Crée des étiquettes de texte pour les noms 
   const labels = monSvg
-    .selectAll("text")
-    .data(donnees)
-    .enter()
-    .append("text")
-    .attr("class", "characterName")
-    .attr("x", 5)
-    .attr("y", (d, i) => i * 50 + 15)
-    .text((d) => d.Character);
+  .selectAll("text.characterName")
+  .data(donnees)
+  .enter()
+  .append("text")
+  .attr("class", "characterName")
+  .attr("x", 5)
+  .attr("y", (d, i) => i * 50 + 15)
+  .text((d) => d.Character);
 
   const labelsCount = monSvg
-    .selectAll(".count")
-    .data(donnees)
-    .join((enter) =>
+  .selectAll(".count")
+  .data(donnees)
+  .join((enter) =>
       enter
-        .append("text")
-        .attr("class", "count")
-        .attr("x", (d, i) => 230 + xScale(tempsEnMilliseconds(d.ScreenTime)))
-        .attr("y", (d, i) => i * 50 + 15)
-        .text((d) => d.ScreenTime)
-        .attr("text-anchor", "middle")
-    );
+      .append("text")
+      .attr("class", "count")
+      .attr("x", 230 )
+      .attr("y", (d, i) => i * 50 + 15)
+      .text((d) => d.ScreenTime)
+      .attr("text-anchor", "middle")
+      .attr("height", 0))
+      .transition() // Commencez une transition
+      .duration(800) // Durée de l'animation
+      .attr("x", (d, i) =>  230 + xScale(tempsEnMilliseconds(d.ScreenTime))) // Définissez la largeur finale
+      .delay((d, i) => i * 100) // Ajoutez un délai avant le début de l'animation pour chaque barre
 }
