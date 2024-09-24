@@ -10,8 +10,8 @@ let description3 = HPDataRow3.Descr;
 
 const slytherin = {
     "quote" : "Slytherin will help you on your way to greatness!",
-    "icon" : "../../assets/img/icon-house-slytherin.png",
-    "bigIcon" : "../../assets/img/big-icon-house-slytherin.png",
+    "icon" : "/img/icon-house-slytherin.png",
+    "bigIcon" : "/img/big-icon-house-slytherin.png",
     "animal" : "Snake",
     "element" : "Water",
     "colors" : "Green and silver",
@@ -20,20 +20,20 @@ const slytherin = {
     "main1" : {
         "name" : "Severus Snape",
         "descr" : description1,
-        "img" : "../../assets/img/characters/severus-snape.png",
+        "img" : "/img/characters/severus-snape.png",
     },
     "main2" : {
         "name" : "Draco Malfoy",
         "descr" : description2,
-        "img" : "../../assets/img/characters/draco-malfoy.png",
+        "img" : "/img/characters/draco-malfoy.png",
     },
     "main3" : {
         "name" : "Bellatrix Lestrange",
         "descr" : description3,
-        "img" : "../../assets/img/characters/bellatrix-lestrange.png",
+        "img" : "/img/characters/bellatrix-lestrange.png",
     },
     "parchement" : {
-        "img" : "../../assets/img/Vector-slytherin.png",
+        "img" : "/img/Vector-slytherin.png",
         "house" : "Slytherin",
         "houseMin" : "slytherin", 
         "adjective1" : "ambitious" ,

@@ -49,7 +49,7 @@ let id = 1;
 export function displayResult(house) {
   //changer le fond de la page par l'image de la maison
   if (!document.body.classList.contains("intro")) {
-    document.body.style.backgroundImage = `url(../../assets/img/fond-${house}.png)`;
+    document.body.style.backgroundImage = `url(/img/fond-${house}.png)`;
   }
 
   //initialiser la bonne maison

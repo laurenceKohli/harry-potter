@@ -87,7 +87,7 @@ function displayMainCharacters(){
 
   const vifOr = document.createElement("IMG");
   vifOr.setAttribute('id', 'vifor');
-  vifOr.src = "../../assets/img/vifOr.png";
+  vifOr.src = "/img/vifOr.png";
 
   const char = document.createElement("div");
   char.classList.add("characters");

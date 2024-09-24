@@ -69,7 +69,7 @@ export function displayQuestion(id){
   section.innerHTML = "";
   const imageDiv = document.createElement("div");
   const image = document.createElement("img");
-  image.src = `/assets/img/questions/question-${id}.png`
+  image.src = `/img/questions/question-${id}.png`
 
   imageDiv.appendChild(image);
 
@@ -88,7 +88,7 @@ export function displayQuestion(id){
 
     const choixpeau = document.createElement("IMG");
   choixpeau.setAttribute('id', 'choixpeau');
-  choixpeau.src = "../../assets/img/sorting_hat.png";
+  choixpeau.src = "/img/sorting_hat.png";
 
     section.append(imageDiv, questionElement, choixpeau);
 

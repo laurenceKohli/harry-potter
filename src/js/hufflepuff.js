@@ -10,8 +10,8 @@ let description3 = HPDataRow3.Descr;
 
 const hufflepuff = {
     "quote" : "Where they are just and loyal, those patient Hufflepuffs are true, and unafraid of toil!",
-    "icon" : "../../assets/img/icon-house-hufflepuff.png",
-    "bigIcon" : "../../assets/img/big-icon-house-hufflepuff.png",
+    "icon" : "/img/icon-house-hufflepuff.png",
+    "bigIcon" : "/img/big-icon-house-hufflepuff.png",
     "animal" : "Badger",
     "element" : "Earth",
     "colors" : "Yellow and black",
@@ -20,20 +20,20 @@ const hufflepuff = {
     "main1" : {
         "name" : "Cedric Diggory",
         "descr" : description1,
-        "img" : "../../assets/img/characters/cedric-diggory.png",
+        "img" : "/img/characters/cedric-diggory.png",
     },
     "main2" : {
         "name" : "Nymphadora Tonks",
         "descr" : description2,
-        "img" : "../../assets/img/characters/nymphadora-tonks.png",
+        "img" : "/img/characters/nymphadora-tonks.png",
     },
     "main3" : {
         "name" : "Pomona Sprout",
         "descr" : description3,
-        "img" : "../../assets/img/characters/pomona-sprout.png",
+        "img" : "/img/characters/pomona-sprout.png",
     },
     "parchement" : {
-        "img" : "../../assets/img/Vector-hufflepuff.png",
+        "img" : "/img/Vector-hufflepuff.png",
         "house" : "Hufflepuff",
         "houseMin" : "hufflepuff",
         "adjective1" : "patient",

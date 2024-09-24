@@ -10,8 +10,8 @@ let description3 = HPDataRow3.Descr;
 
 const ravenclaw = {
     "quote" : "Ravenclaw, where those of wit and learning, will always find their kind!",
-    "icon" : "../../assets/img/icon-house-ravenclaw.png",
-    "bigIcon" : "../../assets/img/big-icon-house-ravenclaw.png",
+    "icon" : "/img/icon-house-ravenclaw.png",
+    "bigIcon" : "/img/big-icon-house-ravenclaw.png",
     "animal" : "Eagle",
     "element" : "Air",
     "colors" : "Blue and bronze",
@@ -20,20 +20,20 @@ const ravenclaw = {
     "main1" : {
         "name" : "Luna Lovegood",
         "descr" : description1,
-        "img" : "../../assets/img/characters/luna-lovegood.png",
+        "img" : "/img/characters/luna-lovegood.png",
     },
     "main2" : {
         "name" : "Gilderoy Lockhart",
         "descr" : description2,
-        "img" : "../../assets/img/characters/gilderoy-lockhart.png",
+        "img" : "/img/characters/gilderoy-lockhart.png",
     },
     "main3" : {
         "name" : "Filius Flitwick",
         "descr" : description3,
-        "img" : "../../assets/img/characters/filius-flitwick.png",
+        "img" : "/img/characters/filius-flitwick.png",
     },
     "parchement" : {
-        "img" : "../../assets/img/Vector-ravenclaw.png",
+        "img" : "/img/Vector-ravenclaw.png",
         "house" : "Ravenclaw",
         "houseMin" : "ravenclaw", 
         "adjective1" : "intelligent" ,

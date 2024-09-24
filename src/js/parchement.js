@@ -5,7 +5,7 @@ export function displayParchement(houseObj) {
     outerDiv.innerHTML = "";
     const innerDiv = document.createElement('div');
     innerDiv.className = 'inner-parchement';
-    innerDiv.style.backgroundImage = `url(../../assets/img/Vector_${houseObj.parchement.houseMin}.png)`;
+    innerDiv.style.backgroundImage = `url(/img/Vector_${houseObj.parchement.houseMin}.png)`;
     innerDiv.style.width = '100%';
     outerDiv.appendChild(innerDiv);
 

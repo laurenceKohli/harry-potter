@@ -19,7 +19,7 @@ export function displayHover(people, house) {
 
   const dobby = document.createElement("IMG");
   dobby.setAttribute('id', 'dobby');
-  dobby.src = "../../assets/img/dobby.png";
+  dobby.src = "/img/dobby.png";
 
   totalScreen.append(titleTotal, dobby);
 

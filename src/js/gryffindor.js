@@ -10,8 +10,8 @@ let description3 = HPDataRow3.Descr;
 
 const gryffindor = {
     "quote" : "Gryffindor, where dwell the brave at heart!",
-    "icon" : "../../assets/img/icon-house-gryffindor.png",
-    "bigIcon" : "../../assets/img/big-icon-house-gryffindor.png",
+    "icon" : "/img/icon-house-gryffindor.png",
+    "bigIcon" : "/img/big-icon-house-gryffindor.png",
     "animal" : "Lion",
     "element" : "Fire",
     "colors" : "Scarlet and gold",
@@ -20,20 +20,20 @@ const gryffindor = {
     "main1" : {
         "name" : "Harry Potter",
         "descr" : description1,
-        "img" : "../../assets/img/characters/harry-potter.png",
+        "img" : "/img/characters/harry-potter.png",
     },
     "main2" : {
         "name" : "Hermione Granger",
         "descr" : description2,
-        "img" : "../../assets/img/characters/hermione-granger.png",
+        "img" : "/img/characters/hermione-granger.png",
     },
     "main3" : {
         "name" : "Ron Weasley",
         "descr" : description3,
-        "img" : "../../assets/img/characters/ron-weasley.png",
+        "img" : "/img/characters/ron-weasley.png",
     },
     "parchement" : {
-        "img" : "../../assets/img/Vector-gryffindor.png",
+        "img" : "/img/Vector-gryffindor.png",
         "house" : "Gryffindor",
         "houseMin" : "gryffindor", 
         "adjective1" : "Courageous",
