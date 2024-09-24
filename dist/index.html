@@ -9,29 +9,31 @@
 	<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 	<title>Harry Potter Quiz</title>
-  <script type="module" crossorigin src="/assets/index-CncW-CbI.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-TQxD777-.css">
+  <script type="module" crossorigin src="/assets/index-DEe-0LEy.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C42hrmni.css">
 </head>
 <body class="intro">
 	<section id="quiz" class="active">
-		<img src="/assets/House_Banners-BpS9jaw1.png" alt="House_Banners">
-		<img src="/assets/HP_title-BdQiSJ3p.png" alt="Harry Potter">
+		<img src="/assets/House_Banners-CCrHJEEm.png" alt="House_Banners">
+		<img src="/assets/HP_title-Dc9BvFrn.png" alt="Harry Potter">
 		<p>Welcome !</p>
-		<img src="/assets/sorting_hat-JXdNaX1C.png" alt="Sorting hat" id="hat">
+		<img src="/assets/sorting_hat-Hm_6ywDH.png" alt="Sorting hat" id="hat">
 		<p>“Your house will be determined by the qualities you possess, not by the color of your eyes or the blood in
 			your veins.” <span>SORTING HAT</span></p>
 		<p>The test begins now !</p>
 	</section>
 
 	<section id="question" class="active">
-		<div>
-			<img src="/assets/question-2-CgSVwMUx.png" alt="">
-		</div>
+		
 	</section>
 
-	<section id="house">		
+	<section id="house" class="active">
+		<div id="houseBasics"></div>
+		<div id="film">Test</div>	
+		<div id="totalScreen"></div>
+		<div id="outer-parchement"></div>
+		<div id="otherHouses"></div>	
 	</section>
-
 
 	<div class="hp-quiz-card hide">
 		<!-- Conteneur principal de la carte avec une classe spécifique -->
@@ -51,6 +53,26 @@
 				<p>[Description]</p>
 				<div class="house"></div>
 			</div>
-		</div>
+		</div>
+	</div>
+
+	<section id="footer" class="active">
+		<div>
+			<p>Ce site a été réalisé dans le cadre d'un projet à la <a href="https://heig-vd.ch/">HEIG-VD</a>.</p>
+			<br>
+			<p>© Steve Pasche et Laurence Kohli - 2024</p>
+		</div>
+		<div>
+			<h5>Sources des données</h5>
+			<ul>
+				<li><a href="https://data.world/priyankad0993/harry-potter-screen-time">Screen time of each caracter per film</a></li>
+				<li><a href="https://www.kaggle.com/datasets/zez000/characters-in-harry-potter-books/data">Caracter's description</a></li>
+				<li><a href="https://harrypotter.fandom.com/wiki/">Hogwarts house's main informations</a></li>
+				<li><a href="https://www.imdb.com/title/tt0295297/?ref_=tt_sims_tt_i_1">Films description</a></li>
+				<li>All illustrations are open source</li>
+			</ul>
+		</div>
+	</section>
+
 </body>
 </html>
