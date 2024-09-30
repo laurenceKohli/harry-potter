@@ -1,4 +1,6 @@
 # harry-potter
+version finale déployée : https://harrypotter-visualdon24.netlify.app
+
 ## Contexte
 *d'où viennent les données, qui les a créées et dans quel contexte*
 
